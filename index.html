@@ -39,7 +39,7 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #6cd6e7"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -77,6 +77,8 @@
 		<nav class="header-nav">
 			<div class="social">
 				
+					<a class="qq" target="_blank" href="/assets/qq.jpg" title="qq"><i class="icon-qq"></i></a>
+		        
 					<a class="weixin" target="_blank" href="/assets/wechat.jpg" title="weixin"><i class="icon-weixin"></i></a>
 		        
 					<a class="mail" target="_blank" href="mailto:1061691172@qq.com" title="mail"><i class="icon-mail"></i></a>
@@ -90,7 +92,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: #6cd6e7"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -114,6 +116,8 @@
 			<nav class="header-nav">
 				<div class="social">
 					
+						<a class="qq" target="_blank" href="/assets/qq.jpg" title="qq"><i class="icon-qq"></i></a>
+			        
 						<a class="weixin" target="_blank" href="/assets/wechat.jpg" title="weixin"><i class="icon-weixin"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto:1061691172@qq.com" title="mail"><i class="icon-mail"></i></a>
@@ -144,6 +148,117 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-我的第二章博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第二章的博客文章</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
+  	<time datetime="2020-04-02T08:41:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Markdown快速入门"><a href="#Markdown快速入门" class="headerlink" title="Markdown快速入门"></a>Markdown快速入门</h1><h2 id="1-关于代码块"><a href="#1-关于代码块" class="headerlink" title="1.关于代码块"></a>1.关于代码块</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//代码块的语法 ```+语言</span></span><br><span class="line">如```html即可构建一个html的代码块</span><br></pre></td></tr></table></figure>
+
+<p>插入一个快速排序算法（java演示）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">quickbyline2</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] a = &#123;<span class="number">5</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">8</span>, <span class="number">6</span>, <span class="number">20</span>, <span class="number">10</span>&#125;;<span class="comment">//0,6</span></span><br><span class="line">        quick(a, <span class="number">0</span>, <span class="number">6</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">7</span>; i++) &#123;</span><br><span class="line">            System.out.println(a[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quick</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (l &lt; r) &#123;</span><br><span class="line">            <span class="keyword">int</span> i = l, j = r, x = a[l];</span><br><span class="line">            <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">                <span class="keyword">while</span> (j &gt; i &amp;&amp; a[j] &gt;= x) &#123;</span><br><span class="line">                    j--;</span><br><span class="line">                &#125;</span><br><span class="line">                a[i] = a[j];</span><br><span class="line">                <span class="keyword">while</span> (i &lt; j &amp;&amp; a[i] &lt;= x) &#123;</span><br><span class="line">                    i++;</span><br><span class="line">                &#125;</span><br><span class="line">                a[j] = a[i];</span><br><span class="line">            &#125;</span><br><span class="line">            a[j] = x;</span><br><span class="line">            quick(a, l, i - <span class="number">1</span>);</span><br><span class="line">            quick(a, i + <span class="number">1</span>, r);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-关于标题"><a href="#2-关于标题" class="headerlink" title="2.关于标题"></a>2.关于标题</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//标题语法</span></span><br><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-关于字体"><a href="#3-关于字体" class="headerlink" title="3.关于字体"></a>3.关于字体</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//加粗</span></span><br><span class="line">**文字**</span><br><span class="line"><span class="comment">//斜体</span></span><br><span class="line">*斜体内容*</span><br><span class="line"><span class="comment">//粗斜体</span></span><br><span class="line">***粗斜体文字***</span><br><span class="line"><span class="comment">//删除线</span></span><br><span class="line">~~被删除的文字~~</span><br><span class="line"><span class="comment">//下划线</span></span><br><span class="line">&lt;u&gt;带有下划线的文字&lt;/u&gt;</span><br></pre></td></tr></table></figure>
+
+<p>演示：</p>
+<p>//加粗<br><strong>文字</strong></p>
+<p>//斜体<br><em>斜体内容</em></p>
+<p>//删除线<br><del>被删除的文字</del></p>
+<p>//下划线<br><u>带有下划线的文字</u></p>
+<p>/粗斜体<br><strong><em>粗斜体文字</em></strong></p>
+<h2 id="4-关于引用"><a href="#4-关于引用" class="headerlink" title="4.关于引用"></a>4.关于引用</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引用</span></span><br><span class="line">&gt;作者：叶凡</span><br><span class="line">    &gt;&gt;作者：叶凡</span><br><span class="line">       &gt;&gt;&gt;作者：叶凡</span><br></pre></td></tr></table></figure>
+
+<p>演示:</p>
+<blockquote>
+<p>作者：李白</p>
+<p>长歌行</p>
+<p> 青青园中葵，朝露待日晞。<br>阳春布德泽，万物生光辉。<br>常恐秋节至，焜黄华叶衰。<br>百川东到海，何时复西归？<br>少壮不努力，老大徒伤悲。 </p>
+</blockquote>
+<h2 id="5-分割线"><a href="#5-分割线" class="headerlink" title="5.分割线"></a>5.分割线</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//分割线</span></span><br><span class="line">***</span><br><span class="line"><span class="comment">//分割线</span></span><br><span class="line">---</span><br><span class="line"><span class="comment">//分割线</span></span><br><span class="line">___</span><br></pre></td></tr></table></figure>
+
+<p>下划线</p>
+<hr>
+<h2 id="6-图片插入"><a href="#6-图片插入" class="headerlink" title="6.图片插入"></a>6.图片插入</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//语法</span></span><br><span class="line">![我的图片](图片路径)</span><br></pre></td></tr></table></figure>
+
+<p>演示: 精美图片的插入(附上一张高清的电脑壁纸)</p>
+<p><img src="D:%5Cblog%5Cthemes%5Cyilia%5Csource%5Cassets%5C%E7%BE%8E%E5%A5%B3.jpg" alt="美女"></p>
+<h2 id="7-超链接"><a href="#7-超链接" class="headerlink" title="7.超链接"></a>7.超链接</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//语法1</span></span><br><span class="line">[显示的文字](网址)</span><br><span class="line"><span class="comment">//语法2</span></span><br><span class="line">&lt;链接&gt;</span><br></pre></td></tr></table></figure>
+
+<p>演示: <a href="https://me.csdn.net/weixin_44798798" target="_blank" rel="noopener">My CSDN</a></p>
+<h2 id="8-关于列表"><a href="#8-关于列表" class="headerlink" title="8.关于列表"></a>8.关于列表</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//无序列表</span></span><br><span class="line">- 目录一</span><br><span class="line">- 目录二</span><br><span class="line">- 目录三</span><br><span class="line"><span class="comment">//有序列表</span></span><br><span class="line">直接写<span class="number">1.2</span>.即可,回车后自动形成有序列表</span><br></pre></td></tr></table></figure>
+
+<p>演示：</p>
+<ul>
+<li>目录一</li>
+<li>目录二</li>
+</ul>
+<h2 id="9-表格"><a href="#9-表格" class="headerlink" title="9.表格"></a>9.表格</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//可直接插入</span></span><br><span class="line"><span class="comment">//或用语法如下</span></span><br><span class="line">| 帐户类型 | 免费帐户 | 标准帐户 | 高级帐户 |</span><br><span class="line">| — | — | — | — |</span><br><span class="line">| 帐户流量 | <span class="number">60</span>M | <span class="number">1</span>GB | <span class="number">10</span>GB |</span><br><span class="line">| 设备数目 | <span class="number">2</span>台 | 无限制 | 无限制 |</span><br><span class="line">| 当前价格 | 免费 | ￥<span class="number">8.17</span>/月 | ￥<span class="number">12.33</span>/月|</span><br></pre></td></tr></table></figure>
+
+<p>无演示，自己动手吧~</p>
+<h2 id="10-缩进"><a href="#10-缩进" class="headerlink" title="10.缩进"></a>10.缩进</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&amp;emsp 是一个空格</span><br><span class="line">&amp;nbsp 是多个空格</span><br></pre></td></tr></table></figure>
+
+<p>无演示，自己动手吧~</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-我的第一章博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -164,10 +279,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="四月二日-晴"><a href="#四月二日-晴" class="headerlink" title="四月二日 晴"></a>四月二日 晴</h1><h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p>使用标题时用#号</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>我曾踏足山巅，也曾进入低谷，二者都让我受益良多</p>
-<p>时间不在于多少，而在于你怎样去使用</p>
-<p>种一棵树最好的时间是在10年前，其次是现在</p>
+        <h1 id="四月二日-晴"><a href="#四月二日-晴" class="headerlink" title="四月二日 晴"></a>四月二日 晴</h1><p>我曾踏足山巅，也曾进入低谷，二者都让我受益良多.</p>
+<p>时间不在于多少，而在于你怎样去使用.</p>
+<p>种一棵树最好的时间是在10年前，其次是现在.</p>
 
       
 
@@ -382,7 +496,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;有建议请留言&lt;br&gt;谢谢大家的访问</div>
   	  	
     	</section>
     
