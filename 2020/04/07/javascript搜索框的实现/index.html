@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Mrhuang</title>
+  <title>javascript实现网站搜索框搜索框 | Mrhuang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Mrhuang">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="网站搜索框的实现1.效果如图所示 部分html代码如下 1234567891011121314&lt;div class&#x3D;&quot;ui-search&quot;&gt;			&lt;div class&#x3D;&quot;ui-search-selected&quot;&gt;&lt;a href&#x3D;&quot;&quot;&gt;医院&lt;&#x2F;a&gt;&lt;&#x2F;div&gt;			&lt;div class&#x3D;&quot;ui-search-select-list&quot;&amp;g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript实现网站搜索框搜索框">
+<meta property="og:url" content="http://yoursite.com/2020/04/07/javascript%E6%90%9C%E7%B4%A2%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0/index.html">
 <meta property="og:site_name" content="Mrhuang">
+<meta property="og:description" content="网站搜索框的实现1.效果如图所示 部分html代码如下 1234567891011121314&lt;div class&#x3D;&quot;ui-search&quot;&gt;			&lt;div class&#x3D;&quot;ui-search-selected&quot;&gt;&lt;a href&#x3D;&quot;&quot;&gt;医院&lt;&#x2F;a&gt;&lt;&#x2F;div&gt;			&lt;div class&#x3D;&quot;ui-search-select-list&quot;&amp;g">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/07/G6reJS.png">
+<meta property="article:published_time" content="2020-04-07T14:00:04.000Z">
+<meta property="article:modified_time" content="2020-04-06T17:12:41.217Z">
 <meta property="article:author" content="Sjin">
+<meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/04/07/G6reJS.png">
   
     <link rel="alternative" href="/atom.xml" title="Mrhuang" type="application/atom+xml">
   
@@ -154,45 +161,82 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-    <article id="post-我的第三章博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-javascript搜索框的实现" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%89%E7%AB%A0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第三篇博客文章</a>
+    <h1 class="article-title" itemprop="name">
+      javascript实现网站搜索框搜索框
     </h1>
   
 
         <!--显示阅读次数-->
 
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+  	阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+
 <!--显示阅读次数完毕-->
         
-        <a href="/2020/04/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%89%E7%AB%A0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-04-04T10:00:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-04</time>
+        <a href="/2020/04/07/javascript%E6%90%9C%E7%B4%A2%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
+  	<time datetime="2020-04-07T14:00:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="我的第三篇博客文章（关于Github的使用）"><a href="#我的第三篇博客文章（关于Github的使用）" class="headerlink" title="我的第三篇博客文章（关于Github的使用）"></a>我的第三篇博客文章（关于Github的使用）</h1><h2 id="一、Github基本概念"><a href="#一、Github基本概念" class="headerlink" title="一、Github基本概念"></a>一、Github基本概念</h2><h2 id="1、使用Github的目的"><a href="#1、使用Github的目的" class="headerlink" title="1、使用Github的目的"></a>1、使用Github的目的</h2><p>借助github托管项目代码</p>
-<h2 id="2、仓库-Repository"><a href="#2、仓库-Repository" class="headerlink" title="2、仓库(Repository)"></a>2、仓库(Repository)</h2><p>用于存放开源的项目，即你的项目</p>
-<h2 id="3、收藏（star）"><a href="#3、收藏（star）" class="headerlink" title="3、收藏（star）"></a>3、收藏（star）</h2><p>收藏项目方便下次查看</p>
-<h2 id="4、复制克隆项目-Fork"><a href="#4、复制克隆项目-Fork" class="headerlink" title="4、复制克隆项目(Fork)"></a>4、复制克隆项目(Fork)</h2><p>可以把别人的项目复制过来</p>
-<h2 id="5、发送请求（Pull-Request）"><a href="#5、发送请求（Pull-Request）" class="headerlink" title="5、发送请求（Pull Request）"></a>5、发送请求（Pull Request）</h2><p>发送请求更新文件，被fork者可以收到请求合并请求者</p>
-<h2 id="6、关注（Watch）"><a href="#6、关注（Watch）" class="headerlink" title="6、关注（Watch）"></a>6、关注（Watch）</h2><p>可以关注某个项目，当这个项目有任何更新，都可以第一时间收到这个项目的更新</p>
-<h2 id="7、Issue"><a href="#7、Issue" class="headerlink" title="7、Issue"></a>7、Issue</h2><p>发现BUG，发现目前没有成型代码，需要讨论的时候使用</p>
-<h2 id="8、Githuub主页（点左上角的logo进入）"><a href="#8、Githuub主页（点左上角的logo进入）" class="headerlink" title="8、Githuub主页（点左上角的logo进入）"></a>8、Githuub主页（点左上角的logo进入）</h2><p>该页左侧主要显示用户动态以及关注用户或关注仓库的动态，右侧显示所有的git库</p>
-<h2 id="9、仓库主页"><a href="#9、仓库主页" class="headerlink" title="9、仓库主页"></a>9、仓库主页</h2><p>仓库主页主要显示项目的信息，如：项目代码、版本、关注、fork情况</p>
-<h2 id="10、个人主页"><a href="#10、个人主页" class="headerlink" title="10、个人主页"></a>10、个人主页</h2><p>显示个人头像、简介、关注我的人、我关注的git库、我的开源项目、我贡献的开源项目等信息</p>
-        
-          <a class="article-more-a" href="/2020/04/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%89%E7%AB%A0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/#more">more >></a>
-        
+        <h1 id="网站搜索框的实现"><a href="#网站搜索框的实现" class="headerlink" title="网站搜索框的实现"></a>网站搜索框的实现</h1><h2 id="1-效果如图所示"><a href="#1-效果如图所示" class="headerlink" title="1.效果如图所示"></a>1.效果如图所示</h2><p><img src="https://s1.ax1x.com/2020/04/07/G6reJS.png" alt="搜索框"></p>
+<p>部分html代码如下</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-search"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-search-selected"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>医院<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-search-select-list"</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#1"</span>&gt;</span>科室<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#1"</span>&gt;</span>疾病<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#1"</span>&gt;</span>医院<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-search-input"</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">""</span> <span class="attr">placeholder</span>=<span class="string">"请输入要搜索的内容"</span>/&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-search-submit"</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">"搜索"</span> /&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>css代码如下</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type="text/css"&gt;</span><br><span class="line">			<span class="selector-tag">a</span>&#123;</span><br><span class="line">				<span class="attribute">text-decoration</span>: none;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">background-color</span>: darkgoldenrod;</span><br><span class="line">				<span class="attribute">position</span>: relative;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-selected</span>&#123;</span><br><span class="line">				<span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-selected</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">				<span class="attribute">display</span>: block;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">background-color</span>: aqua;</span><br><span class="line">				<span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">text-align</span>: center;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-select-list</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">				<span class="attribute">position</span>: absolute;</span><br><span class="line">				<span class="attribute">text-align</span>: center;</span><br><span class="line">				<span class="attribute">top</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">display</span>: none;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-select-list</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">				<span class="attribute">display</span>: block;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">25px</span>;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">46px</span>;</span><br><span class="line">				<span class="attribute">border</span>: <span class="number">2px</span> solid antiquewhite;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-select-list</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">				<span class="attribute">background-color</span>: lightgray;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-input</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">position</span>: absolute;</span><br><span class="line">				<span class="attribute">left</span>: <span class="number">50px</span>;</span><br><span class="line">				<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-input</span> <span class="selector-tag">input</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">38px</span>;</span><br><span class="line">				<span class="attribute">border</span>: <span class="number">0.0625rem</span> solid black;</span><br><span class="line">				<span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-submit</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">position</span>: absolute;</span><br><span class="line">				<span class="attribute">left</span>: <span class="number">250px</span>;</span><br><span class="line">				<span class="attribute">top</span>: <span class="number">0px</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-submit</span> <span class="selector-tag">input</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">42px</span>;</span><br><span class="line">				<span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>js代码如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> ui = $(<span class="keyword">this</span>);</span><br><span class="line">	$(<span class="string">'.ui-search-selected'</span>,ui).on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		$(<span class="string">'.ui-search-select-list'</span>).show();</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;);</span><br><span class="line">	$(<span class="string">'.ui-search-select-list a'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		$(<span class="string">'.ui-search-selected a'</span>).text($(<span class="keyword">this</span>).text());</span><br><span class="line">		$(<span class="string">'.ui-search-select-list'</span>).hide();</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;);</span><br><span class="line">	$(<span class="built_in">document</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">			$(<span class="string">'.ui-search-select-list'</span>).hide();</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;);</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>总结：设置元素的点击事件可以有多种方法，灵活运用this可以减少很多代码的工程，注意 text(),show(),hide()方法在jQuery中的使用</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zfbpay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wcpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -215,7 +259,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Github//" class="article-tag-list-link color2">Github</a>
+        			<a href="/categories/javascript//" class="article-tag-list-link color1">javascript</a>
         		</li>
       		
 		</ul>
@@ -223,16 +267,75 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%89%E7%AB%A0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/07/javascript%E6%90%9C%E7%B4%A2%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%94%E7%AB%A0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第五篇博客文章</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -247,100 +350,44 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第二章博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第二篇的博客文章</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-        
-        <a href="/2020/04/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-04-02T08:41:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Markdown快速入门"><a href="#Markdown快速入门" class="headerlink" title="Markdown快速入门"></a>Markdown快速入门</h1><h2 id="1-关于代码块"><a href="#1-关于代码块" class="headerlink" title="1.关于代码块"></a>1.关于代码块</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//代码块的语法 ```+语言</span></span><br><span class="line">如```html即可构建一个html的代码块</span><br></pre></td></tr></table></figure>
-
-<p>插入一个快速排序算法（java演示）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">quickbyline2</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] a = &#123;<span class="number">5</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">8</span>, <span class="number">6</span>, <span class="number">20</span>, <span class="number">10</span>&#125;;<span class="comment">//0,6</span></span><br><span class="line">        quick(a, <span class="number">0</span>, <span class="number">6</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">7</span>; i++) &#123;</span><br><span class="line">            System.out.println(a[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quick</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (l &lt; r) &#123;</span><br><span class="line">            <span class="keyword">int</span> i = l, j = r, x = a[l];</span><br><span class="line">            <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">                <span class="keyword">while</span> (j &gt; i &amp;&amp; a[j] &gt;= x) &#123;</span><br><span class="line">                    j--;</span><br><span class="line">                &#125;</span><br><span class="line">                a[i] = a[j];</span><br><span class="line">                <span class="keyword">while</span> (i &lt; j &amp;&amp; a[i] &lt;= x) &#123;</span><br><span class="line">                    i++;</span><br><span class="line">                &#125;</span><br><span class="line">                a[j] = a[i];</span><br><span class="line">            &#125;</span><br><span class="line">            a[j] = x;</span><br><span class="line">            quick(a, l, i - <span class="number">1</span>);</span><br><span class="line">            quick(a, i + <span class="number">1</span>, r);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/04/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#网站搜索框的实现"><span class="toc-number">1.</span> <span class="toc-text">网站搜索框的实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-效果如图所示"><span class="toc-number">1.1.</span> <span class="toc-text">1.效果如图所示</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
+  
+  
+  
 
   
+  <div id="SOHUCS" sid="javascript搜索框的实现" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+
   
+
+  
+
 
 
           </div>
@@ -363,8 +410,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
