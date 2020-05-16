@@ -241,6 +241,101 @@
 
 
   
+    <article id="post-javascript封装形变类" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/17/javascript%E5%B0%81%E8%A3%85%E5%BD%A2%E5%8F%98%E7%B1%BB/">java封装形变类</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+
+<!--显示阅读次数完毕-->
+        
+        <a href="/2020/05/17/javascript%E5%B0%81%E8%A3%85%E5%BD%A2%E5%8F%98%E7%B1%BB/" class="archive-article-date">
+  	<time datetime="2020-05-17T04:00:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="封装形变类"><a href="#封装形变类" class="headerlink" title="封装形变类"></a>封装形变类</h1><p>1、为什么要封装形变类？</p>
+<p>当我们要为元素添加动画时，调用封装好的形变类可以简单快捷地使元素经历一定的顺序进行形变</p>
+<p>这里实现了对元素添加多个形变，最后元素按添加形变的顺序一一进行形变，形成了一种动画的效果</p>
+<p>2、代码附上</p>
+<p>css代码如下</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type="text/css"&gt;</span><br><span class="line">			<span class="selector-class">.ball</span>&#123;</span><br><span class="line">			<span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(#ff9b9b <span class="number">50%</span>, #<span class="number">106</span>dbb <span class="number">50%</span>);</span><br><span class="line">			<span class="attribute">transition</span>: all <span class="number">1s</span>;</span><br><span class="line">			<span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">			<span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">			<span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ball</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">				<span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">50px</span>) <span class="built_in">rotate</span>(<span class="number">260deg</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/05/17/javascript%E5%B0%81%E8%A3%85%E5%BD%A2%E5%8F%98%E7%B1%BB/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/javascript//" class="article-tag-list-link color1">javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/17/javascript%E5%B0%81%E8%A3%85%E5%BD%A2%E5%8F%98%E7%B1%BB/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-javascript实现回到顶部功能" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -461,107 +556,9 @@
 
 
   
-    <article id="post-javascript搜索框的实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/07/javascript%E6%90%9C%E7%B4%A2%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0/">javascript实现网站搜索框搜索框</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-        
-        <a href="/2020/04/07/javascript%E6%90%9C%E7%B4%A2%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
-  	<time datetime="2020-04-07T14:00:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="网站搜索框的实现"><a href="#网站搜索框的实现" class="headerlink" title="网站搜索框的实现"></a>网站搜索框的实现</h1><h2 id="1-效果如图所示"><a href="#1-效果如图所示" class="headerlink" title="1.效果如图所示"></a>1.效果如图所示</h2><p><img src="https://s1.ax1x.com/2020/04/07/G6reJS.png" alt="搜索框"></p>
-<p>部分html代码如下</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-search"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-search-selected"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>医院<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-search-select-list"</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#1"</span>&gt;</span>科室<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#1"</span>&gt;</span>疾病<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#1"</span>&gt;</span>医院<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-search-input"</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">""</span> <span class="attr">placeholder</span>=<span class="string">"请输入要搜索的内容"</span>/&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-search-submit"</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">"搜索"</span> /&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>css代码如下</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type="text/css"&gt;</span><br><span class="line">			<span class="selector-tag">a</span>&#123;</span><br><span class="line">				<span class="attribute">text-decoration</span>: none;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">background-color</span>: darkgoldenrod;</span><br><span class="line">				<span class="attribute">position</span>: relative;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-selected</span>&#123;</span><br><span class="line">				<span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-selected</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">				<span class="attribute">display</span>: block;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">background-color</span>: aqua;</span><br><span class="line">				<span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">text-align</span>: center;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-select-list</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">				<span class="attribute">position</span>: absolute;</span><br><span class="line">				<span class="attribute">text-align</span>: center;</span><br><span class="line">				<span class="attribute">top</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">display</span>: none;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-select-list</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">				<span class="attribute">display</span>: block;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">25px</span>;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">46px</span>;</span><br><span class="line">				<span class="attribute">border</span>: <span class="number">2px</span> solid antiquewhite;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-select-list</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">				<span class="attribute">background-color</span>: lightgray;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-input</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">position</span>: absolute;</span><br><span class="line">				<span class="attribute">left</span>: <span class="number">50px</span>;</span><br><span class="line">				<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-input</span> <span class="selector-tag">input</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">38px</span>;</span><br><span class="line">				<span class="attribute">border</span>: <span class="number">0.0625rem</span> solid black;</span><br><span class="line">				<span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-submit</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">position</span>: absolute;</span><br><span class="line">				<span class="attribute">left</span>: <span class="number">250px</span>;</span><br><span class="line">				<span class="attribute">top</span>: <span class="number">0px</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-submit</span> <span class="selector-tag">input</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">42px</span>;</span><br><span class="line">				<span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-
-<p>js代码如下</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> ui = $(<span class="keyword">this</span>);</span><br><span class="line">	$(<span class="string">'.ui-search-selected'</span>,ui).on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		$(<span class="string">'.ui-search-select-list'</span>).show();</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;);</span><br><span class="line">	$(<span class="string">'.ui-search-select-list a'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		$(<span class="string">'.ui-search-selected a'</span>).text($(<span class="keyword">this</span>).text());</span><br><span class="line">		$(<span class="string">'.ui-search-select-list'</span>).hide();</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;);</span><br><span class="line">	$(<span class="built_in">document</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">			$(<span class="string">'.ui-search-select-list'</span>).hide();</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;);</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>总结：设置元素的点击事件可以有多种方法，灵活运用this可以减少很多代码的工程，注意 text(),show(),hide()方法在jQuery中的使用</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/javascript//" class="article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/07/javascript%E6%90%9C%E7%B4%A2%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
     </nav>
   
 
