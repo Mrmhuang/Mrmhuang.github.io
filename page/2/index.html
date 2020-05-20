@@ -155,6 +155,109 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-javascript实现点击轮播图总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/10/javascript%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E8%BD%AE%E6%92%AD%E5%9B%BE%E6%80%BB%E7%BB%93/">实现轮播图总结（1）</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+
+<!--显示阅读次数完毕-->
+        
+        <a href="/2020/04/10/javascript%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E8%BD%AE%E6%92%AD%E5%9B%BE%E6%80%BB%E7%BB%93/" class="archive-article-date">
+  	<time datetime="2020-04-10T04:00:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="关于实现轮播图的小技巧"><a href="#关于实现轮播图的小技巧" class="headerlink" title="关于实现轮播图的小技巧"></a>关于实现轮播图的小技巧</h1><h2 id="1-首先把所有图片置入div-img"><a href="#1-首先把所有图片置入div-img" class="headerlink" title="1.首先把所有图片置入div.img"></a>1.首先把所有图片置入div.img</h2><p>注意：</p>
+<p>div宽度=所有图片的宽度之和</p>
+<p>再在外层写一个属性有overflow：hidden的div包住有图片的div</p>
+<p>调用js通过position移动div.img即可实现轮播图的点击切换功能</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.warp-img&#123;		//有图片的div</span><br><span class="line">			<span class="selector-tag">position</span>: <span class="selector-tag">absolute</span>;</span><br><span class="line">			<span class="selector-tag">width</span>: 1770<span class="selector-tag">px</span>;</span><br><span class="line">			<span class="selector-tag">height</span>: 470<span class="selector-tag">px</span>;</span><br><span class="line">			<span class="selector-tag">left</span>: 0;</span><br><span class="line">			<span class="selector-tag">transition</span>: <span class="selector-tag">all</span> <span class="selector-class">.5s</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.mid</span>	&#123;</span><br><span class="line">			<span class="attribute">position</span>: absolute;</span><br><span class="line">			<span class="attribute">width</span>: <span class="number">570px</span>;</span><br><span class="line">			<span class="attribute">height</span>: <span class="number">470px</span>;</span><br><span class="line">			<span class="attribute">background-color</span>: <span class="number">#ADFF2F</span>;</span><br><span class="line">			<span class="attribute">overflow</span>: hidden;</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mid"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"warp-img"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"---.jpg"</span> &gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"---.jpg"</span> &gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"---.jpg"</span> &gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> warp = $(<span class="string">'.warp'</span>);</span><br><span class="line">    <span class="keyword">var</span> mid = $(<span class="string">'.mid'</span>);</span><br><span class="line">	<span class="keyword">var</span> width = $(<span class="string">'.mid'</span>).width();</span><br><span class="line">	<span class="built_in">console</span>.log(width);</span><br><span class="line">	</span><br><span class="line">	mid</span><br><span class="line">	.on(<span class="string">'move_to'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">evt,index</span>)</span>&#123;</span><br><span class="line">		warp.css(<span class="string">'left'</span>,index*<span class="number">570</span>*<span class="number">-1</span>);</span><br><span class="line">	&#125;)<span class="comment">//添加move_to事件给mid</span></span><br><span class="line">	</span><br><span class="line">	tips.on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> index = $(<span class="keyword">this</span>).index();</span><br><span class="line">		mid.triggerHandler(<span class="string">'move_to'</span>,index);</span><br><span class="line">	&#125;);<span class="comment">//当点击tips即按钮时，触发mid的move_to事件</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-关于Jquery中-的补充"><a href="#2-关于Jquery中-的补充" class="headerlink" title="2.关于Jquery中$的补充"></a>2.关于Jquery中$的补充</h2><p>在文档的第一个表单中，查找所有的单选按钮(即: type 值为 radio 的 input 元素)。<br>jQuery 代码:<br>$(“input:radio”, document.forms[0]); </p>
+<p>第二个参数是限定查找范围为document.forms[0]，找的是type 值为 radio 的 input 元素</p>
+<h2 id="3-关于-background-position属性"><a href="#3-关于-background-position属性" class="headerlink" title="3.关于 background-position属性"></a>3.关于 background-position属性</h2><p>可以很轻松的控制背景图像在对象的背景区域中的起始显示位置。 </p>
+<p><a href="https://blog.csdn.net/ixygj197875/article/details/79333151?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1" target="_blank" rel="noopener">相关内容</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/javascript//" class="article-tag-list-link color1">javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/10/javascript%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E8%BD%AE%E6%92%AD%E5%9B%BE%E6%80%BB%E7%BB%93/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-javascript搜索框的实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -445,105 +548,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/04/04/%E6%88%91%E7%9A%84%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第三章博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%89%E7%AB%A0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第三篇博客文章</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-        
-        <a href="/2020/04/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%89%E7%AB%A0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-04-04T10:00:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="我的第三篇博客文章（关于Github的使用）"><a href="#我的第三篇博客文章（关于Github的使用）" class="headerlink" title="我的第三篇博客文章（关于Github的使用）"></a>我的第三篇博客文章（关于Github的使用）</h1><h2 id="一、Github基本概念"><a href="#一、Github基本概念" class="headerlink" title="一、Github基本概念"></a>一、Github基本概念</h2><h2 id="1、使用Github的目的"><a href="#1、使用Github的目的" class="headerlink" title="1、使用Github的目的"></a>1、使用Github的目的</h2><p>借助github托管项目代码</p>
-<h2 id="2、仓库-Repository"><a href="#2、仓库-Repository" class="headerlink" title="2、仓库(Repository)"></a>2、仓库(Repository)</h2><p>用于存放开源的项目，即你的项目</p>
-<h2 id="3、收藏（star）"><a href="#3、收藏（star）" class="headerlink" title="3、收藏（star）"></a>3、收藏（star）</h2><p>收藏项目方便下次查看</p>
-<h2 id="4、复制克隆项目-Fork"><a href="#4、复制克隆项目-Fork" class="headerlink" title="4、复制克隆项目(Fork)"></a>4、复制克隆项目(Fork)</h2><p>可以把别人的项目复制过来</p>
-<h2 id="5、发送请求（Pull-Request）"><a href="#5、发送请求（Pull-Request）" class="headerlink" title="5、发送请求（Pull Request）"></a>5、发送请求（Pull Request）</h2><p>发送请求更新文件，被fork者可以收到请求合并请求者</p>
-<h2 id="6、关注（Watch）"><a href="#6、关注（Watch）" class="headerlink" title="6、关注（Watch）"></a>6、关注（Watch）</h2><p>可以关注某个项目，当这个项目有任何更新，都可以第一时间收到这个项目的更新</p>
-<h2 id="7、Issue"><a href="#7、Issue" class="headerlink" title="7、Issue"></a>7、Issue</h2><p>发现BUG，发现目前没有成型代码，需要讨论的时候使用</p>
-<h2 id="8、Githuub主页（点左上角的logo进入）"><a href="#8、Githuub主页（点左上角的logo进入）" class="headerlink" title="8、Githuub主页（点左上角的logo进入）"></a>8、Githuub主页（点左上角的logo进入）</h2><p>该页左侧主要显示用户动态以及关注用户或关注仓库的动态，右侧显示所有的git库</p>
-<h2 id="9、仓库主页"><a href="#9、仓库主页" class="headerlink" title="9、仓库主页"></a>9、仓库主页</h2><p>仓库主页主要显示项目的信息，如：项目代码、版本、关注、fork情况</p>
-<h2 id="10、个人主页"><a href="#10、个人主页" class="headerlink" title="10、个人主页"></a>10、个人主页</h2><p>显示个人头像、简介、关注我的人、我关注的git库、我的开源项目、我贡献的开源项目等信息</p>
-        
-          <a class="article-more-a" href="/2020/04/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%89%E7%AB%A0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Github//" class="article-tag-list-link color2">Github</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%89%E7%AB%A0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
         </p>
       
 
