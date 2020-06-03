@@ -439,14 +439,14 @@
 
 
   
-    <article id="post-javascript实现回到顶部功能" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-如何构建vue项目" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/10/javascript%E5%AE%9E%E7%8E%B0%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8%E5%8A%9F%E8%83%BD/">实现回到顶部功能</a>
+      <a class="article-title" href="/2020/05/12/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BAvue%E9%A1%B9%E7%9B%AE/">搭建vue项目</a>
     </h1>
   
 
@@ -454,44 +454,22 @@
 
 <!--显示阅读次数完毕-->
         
-        <a href="/2020/04/10/javascript%E5%AE%9E%E7%8E%B0%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8%E5%8A%9F%E8%83%BD/" class="archive-article-date">
-  	<time datetime="2020-04-10T07:00:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
+        <a href="/2020/05/12/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BAvue%E9%A1%B9%E7%9B%AE/" class="archive-article-date">
+  	<time datetime="2020-05-12T14:00:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="javascript实现回到顶部功能"><a href="#javascript实现回到顶部功能" class="headerlink" title="javascript实现回到顶部功能"></a>javascript实现回到顶部功能</h1><p>1.话不多说 直接附上代码</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.Ui-Top</span>&#123;</span><br><span class="line">				<span class="attribute">display</span>: block;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">background-color</span>: gray;</span><br><span class="line">				<span class="attribute">position</span>: fixed;</span><br><span class="line">				<span class="attribute">bottom</span>: <span class="number">10px</span>;</span><br><span class="line">				<span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">display</span>: none;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.Ui-Top</span><span class="selector-pseudo">:after</span>&#123;</span><br><span class="line">				<span class="attribute">display</span>: block;</span><br><span class="line">				<span class="attribute">content</span>: <span class="string">'回到顶部'</span>;</span><br><span class="line">				<span class="attribute">font-size</span>: <span class="number">17px</span>;</span><br><span class="line">				<span class="attribute">text-align</span>: center;</span><br><span class="line">				<span class="attribute">color</span>: black;</span><br><span class="line">				<span class="attribute">line-height</span>: <span class="number">20px</span>;</span><br><span class="line">			&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="构建vue项目"><a href="#构建vue项目" class="headerlink" title="构建vue项目"></a>构建vue项目</h1><p>以下操作都是基于已经安装好node环境，npm正常运行的情况下</p>
+<h4 id="1-第一步全局安装vue-cli脚手架"><a href="#1-第一步全局安装vue-cli脚手架" class="headerlink" title="1.第一步全局安装vue-cli脚手架"></a>1.第一步全局安装vue-cli脚手架</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i vue-cli -g</span><br></pre></td></tr></table></figure>
 
+<h4 id="2-第二步-使用命令开始初始化并创建自己的项目"><a href="#2-第二步-使用命令开始初始化并创建自己的项目" class="headerlink" title="2.第二步 使用命令开始初始化并创建自己的项目"></a>2.第二步 使用命令开始初始化并创建自己的项目</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init webpack ×××（项目名称）</span><br></pre></td></tr></table></figure>
 
+<h4 id="3-第三步-使用命令开始初始化并创建自己的项目"><a href="#3-第三步-使用命令开始初始化并创建自己的项目" class="headerlink" title="3.第三步 使用命令开始初始化并创建自己的项目"></a>3.第三步 使用命令开始初始化并创建自己的项目</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$.fn.UiBackTop = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> ui = $(<span class="keyword">this</span>);</span><br><span class="line">	<span class="keyword">var</span> el = $(<span class="string">'&lt;a class="Ui-Top" href="#"&gt;'</span>);</span><br><span class="line">	ui.append(el);</span><br><span class="line">	<span class="keyword">var</span> windowHeight = $(<span class="built_in">window</span>).height();</span><br><span class="line">	$(<span class="built_in">window</span>).on(<span class="string">'scroll'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> top = $(<span class="keyword">this</span>).scrollTop();</span><br><span class="line">		<span class="keyword">if</span>(top&gt;windowHeight)&#123;</span><br><span class="line">			$(<span class="string">'.Ui-Top'</span>).show();</span><br><span class="line">		&#125;<span class="keyword">else</span></span><br><span class="line">		$(<span class="string">'.Ui-Top'</span>).hide();</span><br><span class="line">	&#125;);</span><br><span class="line">	$(<span class="string">'.Ui-Top'</span>).on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		$(<span class="built_in">window</span>).scrollTop(<span class="number">0</span>);</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	$(<span class="string">'body'</span>).UiBackTop();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>解释：</p>
-<ul>
-<li>创建一个UiBackTop函数，运用append</li>
-<li>插入元素&lt;a class=”Ui-Top” href=”#”&gt;在body中用 $(window).height(); 获取窗口的高度</li>
-<li>添加scroll事件给window再用 $(this).scrollTop();获取目前滚动条垂直距顶部的距离，当 滚动条垂直距顶部的距离到某一个数值，显示a元素</li>
-</ul>
-<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展:"></a>拓展:</h2><ul>
-<li>获取浏览器显示区域（可视区域）的高度 ：   </li>
-<li>$(window).height();<br>获取浏览器显示区域（可视区域）的宽度 ：</li>
-<li>$(window).width();<br>获取页面的文档高度   </li>
-<li>$(document).height();<br>获取页面的文档宽度 ：</li>
-<li>$(document).width();<br>浏览器当前窗口文档body的高度：  </li>
-<li>$(document.body).height();<br>浏览器当前窗口文档body的宽度： </li>
-<li>$(document.body).width();<br>获取滚动条到顶部的垂直高度 (即网页被卷上去的高度)  </li>
-<li>$(document).scrollTop();<br>获取滚动条到左边的垂直宽度 ：</li>
-<li>$(document).scrollLeft();<br>获取或设置元素的宽度：</li>
-<li>$(obj).width();<br>获取或设置元素的高度：</li>
-<li>$(object).height();</li>
-<li>某个元素的上边界到body最顶部的距离：obj.offset().top;（在元素的包含元素不含滚动条的情况下）</li>
-<li>某个元素的左边界到body最左边的距离：obj.offset().left;（在元素的包含元素不含滚动条的情况下）</li>
-<li>返回当前元素的上边界到它的包含元素的上边界的偏移量：object.offset().top（在元素的包含元素含滚动条的情况下）</li>
-<li>返回当前元素的左边界到它的包含元素的左边界的偏移量：object.offset().left（在元素的包含元素含滚动条的情况下）</li>
-</ul>
+<p>4.如果弹出一个vue网页，恭喜你成功构建了一个vue项目</p>
 
       
 
@@ -517,7 +495,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/javascript//" class="article-tag-list-link color1">javascript</a>
+        			<a href="/categories/vue//" class="article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
@@ -526,7 +504,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/10/javascript%E5%AE%9E%E7%8E%B0%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8%E5%8A%9F%E8%83%BD/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/05/12/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BAvue%E9%A1%B9%E7%9B%AE/">展开全文 >></a>
         </p>
       
 
