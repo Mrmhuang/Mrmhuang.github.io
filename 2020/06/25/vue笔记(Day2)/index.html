@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Vue学习笔记 | Mrhuang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Vue学习笔记(Day2)1-v-bind的基本使用 首先要知道v-bind的语法糖是冒号  附上相关绑定href和src的代码，v-bind让网页绑定的数据是可变的(我这语文功底…啧啧啧) 123456789101112131415161718&lt;div id&#x3D;&quot;app&quot;&gt;  &amp;#123;&amp;#123;message&amp;#125;&amp;#125;  &lt;a :href&#x3D;&quot;lianjie&quot;&amp;">
+  <meta name="description" content="Vue学习笔记(Day2)(动态绑定)1-v-bind的基本使用 首先要知道v-bind的语法糖是冒号  附上相关绑定href和src的代码，v-bind让网页绑定的数据是可变的(我这语文功底…啧啧啧) 123456789101112131415161718&lt;div id&#x3D;&quot;app&quot;&gt;  &amp;#123;&amp;#123;message&amp;#125;&amp;#125;  &lt;a :href&#x3D;&quot;lia">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue学习笔记">
 <meta property="og:url" content="http://yoursite.com/2020/06/25/vue%E7%AC%94%E8%AE%B0(Day2)/index.html">
 <meta property="og:site_name" content="Mrhuang">
-<meta property="og:description" content="Vue学习笔记(Day2)1-v-bind的基本使用 首先要知道v-bind的语法糖是冒号  附上相关绑定href和src的代码，v-bind让网页绑定的数据是可变的(我这语文功底…啧啧啧) 123456789101112131415161718&lt;div id&#x3D;&quot;app&quot;&gt;  &amp;#123;&amp;#123;message&amp;#125;&amp;#125;  &lt;a :href&#x3D;&quot;lianjie&quot;&amp;">
+<meta property="og:description" content="Vue学习笔记(Day2)(动态绑定)1-v-bind的基本使用 首先要知道v-bind的语法糖是冒号  附上相关绑定href和src的代码，v-bind让网页绑定的数据是可变的(我这语文功底…啧啧啧) 123456789101112131415161718&lt;div id&#x3D;&quot;app&quot;&gt;  &amp;#123;&amp;#123;message&amp;#125;&amp;#125;  &lt;a :href&#x3D;&quot;lia">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-06-25T12:00:04.000Z">
-<meta property="article:modified_time" content="2020-06-24T19:19:43.842Z">
+<meta property="article:modified_time" content="2020-07-08T05:28:31.523Z">
 <meta property="article:author" content="Sjin">
 <meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
@@ -190,11 +190,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Vue学习笔记-Day2"><a href="#Vue学习笔记-Day2" class="headerlink" title="Vue学习笔记(Day2)"></a>Vue学习笔记(Day2)</h1><h2 id="1-v-bind的基本使用"><a href="#1-v-bind的基本使用" class="headerlink" title="1-v-bind的基本使用"></a>1-v-bind的基本使用</h2><ul>
+        <h1 id="Vue学习笔记-Day2-动态绑定"><a href="#Vue学习笔记-Day2-动态绑定" class="headerlink" title="Vue学习笔记(Day2)(动态绑定)"></a>Vue学习笔记(Day2)(动态绑定)</h1><h2 id="1-v-bind的基本使用"><a href="#1-v-bind的基本使用" class="headerlink" title="1-v-bind的基本使用"></a>1-v-bind的基本使用</h2><ul>
 <li><p>首先要知道v-bind的语法糖是冒号</p>
 </li>
 <li><p>附上相关绑定href和src的代码，v-bind让网页绑定的数据是可变的(我这语文功底…啧啧啧)</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">  &#123;&#123;message&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">"lianjie"</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">"tupian"</span> <span class="attr">alt</span>=<span class="string">"这是一张图片"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:href</span>=<span class="string">"lianjie"</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">v-bind:src</span>=<span class="string">"tupian"</span> <span class="attr">alt</span>=<span class="string">"这是一张图片"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../vue/vue.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">  <span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="actionscript">    el:<span class="string">'#app'</span>,</span></span><br><span class="line">    data:&#123;</span><br><span class="line"><span class="actionscript">      message:<span class="string">'你好啊'</span>,</span></span><br><span class="line"><span class="actionscript">      lianjie:<span class="string">'https://www.baidu.com'</span>,</span></span><br><span class="line"><span class="actionscript">      tupian:<span class="string">'//i1.hdslb.com/bfs/archive/04cae00c9e4ad92e0b486c91165c9fd55e7ac1ee.jpg@400w_250h.webp'</span></span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 
 </li>
 </ul>
@@ -361,6 +362,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/07/03/vue%E7%AC%94%E8%AE%B0(Day3)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Vue学习笔记
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/06/09/vue%E7%AC%94%E8%AE%B0(Day1)/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Vue学习笔记</div>
@@ -390,7 +400,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue学习笔记-Day2"><span class="toc-number">1.</span> <span class="toc-text">Vue学习笔记(Day2)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-v-bind的基本使用"><span class="toc-number">1.1.</span> <span class="toc-text">1-v-bind的基本使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-v-bind动态绑定class（对象语法）"><span class="toc-number">1.2.</span> <span class="toc-text">2-v-bind动态绑定class（对象语法）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-v-bind动态绑定class-数组方法"><span class="toc-number">1.3.</span> <span class="toc-text">3-v-bind动态绑定class(数组方法)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-v-bind动态绑定style-对象方法"><span class="toc-number">1.4.</span> <span class="toc-text">4-v-bind动态绑定style(对象方法)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-v-bind动态绑定style-数组方法"><span class="toc-number">1.5.</span> <span class="toc-text">5-v-bind动态绑定style(数组方法)</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue学习笔记-Day2-动态绑定"><span class="toc-number">1.</span> <span class="toc-text">Vue学习笔记(Day2)(动态绑定)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-v-bind的基本使用"><span class="toc-number">1.1.</span> <span class="toc-text">1-v-bind的基本使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-v-bind动态绑定class（对象语法）"><span class="toc-number">1.2.</span> <span class="toc-text">2-v-bind动态绑定class（对象语法）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-v-bind动态绑定class-数组方法"><span class="toc-number">1.3.</span> <span class="toc-text">3-v-bind动态绑定class(数组方法)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-v-bind动态绑定style-对象方法"><span class="toc-number">1.4.</span> <span class="toc-text">4-v-bind动态绑定style(对象方法)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-v-bind动态绑定style-数组方法"><span class="toc-number">1.5.</span> <span class="toc-text">5-v-bind动态绑定style(数组方法)</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
