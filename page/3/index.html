@@ -155,6 +155,233 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-vue笔记(Day1)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/09/vue%E7%AC%94%E8%AE%B0(Day1)/">Vue学习笔记</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+
+<!--显示阅读次数完毕-->
+        
+        <a href="/2020/06/09/vue%E7%AC%94%E8%AE%B0(Day1)/" class="archive-article-date">
+  	<time datetime="2020-06-09T13:00:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Vue学习笔记-Day1-ES6-vue初体验-插值操作"><a href="#Vue学习笔记-Day1-ES6-vue初体验-插值操作" class="headerlink" title="Vue学习笔记(Day1)(ES6+vue初体验+插值操作)"></a>Vue学习笔记(Day1)(ES6+vue初体验+插值操作)</h1><h2 id="1-ES6的补充"><a href="#1-ES6的补充" class="headerlink" title="1-ES6的补充"></a>1-ES6的补充</h2><h3 id="1-块级作用域"><a href="#1-块级作用域" class="headerlink" title="(1)块级作用域"></a>(1)块级作用域</h3><ul>
+<li><p>var是javascript设计时的缺陷，使用var会使你解决某些问题时出现困境，所以在ES6中出现了let取代它</p>
+</li>
+<li><p>var和let最大的区别就是let是有块级作用域的，而var没有</p>
+</li>
+<li><p>简单举例一个使用var造成的问题</p>
+<p>html:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>2<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>3<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>4<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>5<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>js:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> btns = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'button'</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;btns.length;i++)&#123;</span><br><span class="line">  btns[i].addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'第'</span>+i+<span class="string">'个按钮被点击了'</span>)</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>执行后发现不论点击哪个按钮，都是显示（第5个按钮被点击），因为var定义的i没有块级作用域。</p>
+<p>当然也有在ES5中解决此问题的方法，使用闭包，用函数自调，因为函数有作用域。</p>
+<p>把js改为:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;btns.length;i++)&#123;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span> (<span class="params">i</span>) </span>&#123;</span><br><span class="line">      btns[i].addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'第'</span>+i+<span class="string">'个按钮被点击了'</span>)</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;)(i)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>然而把var变为let是这样的:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> btns = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'button'</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;btns.length;i++)&#123;</span><br><span class="line">  btns[i].addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'第'</span>+i+<span class="string">'个按钮被点击了'</span>)</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>简单快捷，而且let不会造成全局污染，完全解决问题,十分有用!</p>
+</li>
+</ul>
+<h3 id="2-const的用法"><a href="#2-const的用法" class="headerlink" title="(2)const的用法"></a>(2)const的用法</h3><p>const定义的普通常量不能再修改，但是const定义的对象里的数据是可以修改的，其他的没什么重点.</p>
+<h3 id="3-ES6对象字面量增强写法"><a href="#3-ES6对象字面量增强写法" class="headerlink" title="(3)ES6对象字面量增强写法"></a>(3)ES6对象字面量增强写法</h3><ul>
+<li><p>注意重点，对象</p>
+</li>
+<li><p>在对象里，函数可以写成</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//新写法</span></span><br><span class="line">函数名()&#123;&#125;</span><br><span class="line"><span class="comment">//旧写法</span></span><br><span class="line">函数名:funtion()&#123;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在对象里，定义对象的数据可以写成</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//新写法</span></span><br><span class="line"><span class="keyword">const</span> obj=&#123;</span><br><span class="line">    name,</span><br><span class="line">    age</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//旧写法</span></span><br><span class="line"><span class="keyword">const</span> obj=&#123;</span><br><span class="line">    name:name,</span><br><span class="line">    age:age</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/2020/06/09/vue%E7%AC%94%E8%AE%B0(Day1)/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/vue//" class="article-tag-list-link color4">vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/06/09/vue%E7%AC%94%E8%AE%B0(Day1)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-react安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/20/react%E5%AE%89%E8%A3%85/">react</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+
+<!--显示阅读次数完毕-->
+        
+        <a href="/2020/05/20/react%E5%AE%89%E8%A3%85/" class="archive-article-date">
+  	<time datetime="2020-05-20T04:00:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="react的简单环境的安装"><a href="#react的简单环境的安装" class="headerlink" title="react的简单环境的安装"></a>react的简单环境的安装</h1><h3 id="1-安装前提"><a href="#1-安装前提" class="headerlink" title="1.安装前提"></a>1.安装前提</h3><ul>
+<li><p>已经安装好node.js，若未安装，请进入下方链接（教程+安装链接）都在里面</p>
+<p><a href="https://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">安装node.js</a></p>
+</li>
+<li><p>已安装好npm</p>
+</li>
+</ul>
+<h3 id="2-安装脚手架"><a href="#2-安装脚手架" class="headerlink" title="2.安装脚手架"></a>2.安装脚手架</h3><ul>
+<li><p>打开命令行运行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx create-react-app my-app</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>可能会出现错误，如下图所示</p>
+<p><img src="https://s1.ax1x.com/2020/05/20/Y72bnK.png" alt=""></p>
+<p>解决方法: 把npm更新到最新版本</p>
+        
+          <a class="article-more-a" href="/2020/05/20/react%E5%AE%89%E8%A3%85/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/react//" class="article-tag-list-link color1">react</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/20/react%E5%AE%89%E8%A3%85/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-javascript封装形变类" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -316,226 +543,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/05/12/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BAvue%E9%A1%B9%E7%9B%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-javascript实现回到顶部功能" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/10/javascript%E5%AE%9E%E7%8E%B0%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8%E5%8A%9F%E8%83%BD/">实现回到顶部功能</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-        
-        <a href="/2020/04/10/javascript%E5%AE%9E%E7%8E%B0%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8%E5%8A%9F%E8%83%BD/" class="archive-article-date">
-  	<time datetime="2020-04-10T07:00:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="javascript实现回到顶部功能"><a href="#javascript实现回到顶部功能" class="headerlink" title="javascript实现回到顶部功能"></a>javascript实现回到顶部功能</h1><p>1.话不多说 直接附上代码</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.Ui-Top</span>&#123;</span><br><span class="line">				<span class="attribute">display</span>: block;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">background-color</span>: gray;</span><br><span class="line">				<span class="attribute">position</span>: fixed;</span><br><span class="line">				<span class="attribute">bottom</span>: <span class="number">10px</span>;</span><br><span class="line">				<span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">display</span>: none;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.Ui-Top</span><span class="selector-pseudo">:after</span>&#123;</span><br><span class="line">				<span class="attribute">display</span>: block;</span><br><span class="line">				<span class="attribute">content</span>: <span class="string">'回到顶部'</span>;</span><br><span class="line">				<span class="attribute">font-size</span>: <span class="number">17px</span>;</span><br><span class="line">				<span class="attribute">text-align</span>: center;</span><br><span class="line">				<span class="attribute">color</span>: black;</span><br><span class="line">				<span class="attribute">line-height</span>: <span class="number">20px</span>;</span><br><span class="line">			&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$.fn.UiBackTop = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> ui = $(<span class="keyword">this</span>);</span><br><span class="line">	<span class="keyword">var</span> el = $(<span class="string">'&lt;a class="Ui-Top" href="#"&gt;'</span>);</span><br><span class="line">	ui.append(el);</span><br><span class="line">	<span class="keyword">var</span> windowHeight = $(<span class="built_in">window</span>).height();</span><br><span class="line">	$(<span class="built_in">window</span>).on(<span class="string">'scroll'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> top = $(<span class="keyword">this</span>).scrollTop();</span><br><span class="line">		<span class="keyword">if</span>(top&gt;windowHeight)&#123;</span><br><span class="line">			$(<span class="string">'.Ui-Top'</span>).show();</span><br><span class="line">		&#125;<span class="keyword">else</span></span><br><span class="line">		$(<span class="string">'.Ui-Top'</span>).hide();</span><br><span class="line">	&#125;);</span><br><span class="line">	$(<span class="string">'.Ui-Top'</span>).on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		$(<span class="built_in">window</span>).scrollTop(<span class="number">0</span>);</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	$(<span class="string">'body'</span>).UiBackTop();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>解释：</p>
-<ul>
-<li>创建一个UiBackTop函数，运用append</li>
-<li>插入元素&lt;a class=”Ui-Top” href=”#”&gt;在body中用 $(window).height(); 获取窗口的高度</li>
-<li>添加scroll事件给window再用 $(this).scrollTop();获取目前滚动条垂直距顶部的距离，当 滚动条垂直距顶部的距离到某一个数值，显示a元素</li>
-</ul>
-<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展:"></a>拓展:</h2><ul>
-<li>获取浏览器显示区域（可视区域）的高度 ：   </li>
-<li>$(window).height();<br>获取浏览器显示区域（可视区域）的宽度 ：</li>
-<li>$(window).width();<br>获取页面的文档高度   </li>
-<li>$(document).height();<br>获取页面的文档宽度 ：</li>
-<li>$(document).width();<br>浏览器当前窗口文档body的高度：  </li>
-<li>$(document.body).height();<br>浏览器当前窗口文档body的宽度： </li>
-<li>$(document.body).width();<br>获取滚动条到顶部的垂直高度 (即网页被卷上去的高度)  </li>
-<li>$(document).scrollTop();<br>获取滚动条到左边的垂直宽度 ：</li>
-<li>$(document).scrollLeft();<br>获取或设置元素的宽度：</li>
-<li>$(obj).width();<br>获取或设置元素的高度：</li>
-<li>$(object).height();</li>
-<li>某个元素的上边界到body最顶部的距离：obj.offset().top;（在元素的包含元素不含滚动条的情况下）</li>
-<li>某个元素的左边界到body最左边的距离：obj.offset().left;（在元素的包含元素不含滚动条的情况下）</li>
-<li>返回当前元素的上边界到它的包含元素的上边界的偏移量：object.offset().top（在元素的包含元素含滚动条的情况下）</li>
-<li>返回当前元素的左边界到它的包含元素的左边界的偏移量：object.offset().left（在元素的包含元素含滚动条的情况下）</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/javascript//" class="article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/10/javascript%E5%AE%9E%E7%8E%B0%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8%E5%8A%9F%E8%83%BD/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-javascript实现点击轮播图总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/10/javascript%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E8%BD%AE%E6%92%AD%E5%9B%BE%E6%80%BB%E7%BB%93/">实现轮播图总结（1）</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-        
-        <a href="/2020/04/10/javascript%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E8%BD%AE%E6%92%AD%E5%9B%BE%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2020-04-10T04:00:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="关于实现轮播图的小技巧"><a href="#关于实现轮播图的小技巧" class="headerlink" title="关于实现轮播图的小技巧"></a>关于实现轮播图的小技巧</h1><h2 id="1-首先把所有图片置入div-img"><a href="#1-首先把所有图片置入div-img" class="headerlink" title="1.首先把所有图片置入div.img"></a>1.首先把所有图片置入div.img</h2><p>注意：</p>
-<p>div宽度=所有图片的宽度之和</p>
-<p>再在外层写一个属性有overflow：hidden的div包住有图片的div</p>
-<p>调用js通过position移动div.img即可实现轮播图的点击切换功能</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.warp-img&#123;		//有图片的div</span><br><span class="line">			<span class="selector-tag">position</span>: <span class="selector-tag">absolute</span>;</span><br><span class="line">			<span class="selector-tag">width</span>: 1770<span class="selector-tag">px</span>;</span><br><span class="line">			<span class="selector-tag">height</span>: 470<span class="selector-tag">px</span>;</span><br><span class="line">			<span class="selector-tag">left</span>: 0;</span><br><span class="line">			<span class="selector-tag">transition</span>: <span class="selector-tag">all</span> <span class="selector-class">.5s</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.mid</span>	&#123;</span><br><span class="line">			<span class="attribute">position</span>: absolute;</span><br><span class="line">			<span class="attribute">width</span>: <span class="number">570px</span>;</span><br><span class="line">			<span class="attribute">height</span>: <span class="number">470px</span>;</span><br><span class="line">			<span class="attribute">background-color</span>: <span class="number">#ADFF2F</span>;</span><br><span class="line">			<span class="attribute">overflow</span>: hidden;</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mid"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"warp-img"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"---.jpg"</span> &gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"---.jpg"</span> &gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"---.jpg"</span> &gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> warp = $(<span class="string">'.warp'</span>);</span><br><span class="line">    <span class="keyword">var</span> mid = $(<span class="string">'.mid'</span>);</span><br><span class="line">	<span class="keyword">var</span> width = $(<span class="string">'.mid'</span>).width();</span><br><span class="line">	<span class="built_in">console</span>.log(width);</span><br><span class="line">	</span><br><span class="line">	mid</span><br><span class="line">	.on(<span class="string">'move_to'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">evt,index</span>)</span>&#123;</span><br><span class="line">		warp.css(<span class="string">'left'</span>,index*<span class="number">570</span>*<span class="number">-1</span>);</span><br><span class="line">	&#125;)<span class="comment">//添加move_to事件给mid</span></span><br><span class="line">	</span><br><span class="line">	tips.on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> index = $(<span class="keyword">this</span>).index();</span><br><span class="line">		mid.triggerHandler(<span class="string">'move_to'</span>,index);</span><br><span class="line">	&#125;);<span class="comment">//当点击tips即按钮时，触发mid的move_to事件</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2-关于Jquery中-的补充"><a href="#2-关于Jquery中-的补充" class="headerlink" title="2.关于Jquery中$的补充"></a>2.关于Jquery中$的补充</h2><p>在文档的第一个表单中，查找所有的单选按钮(即: type 值为 radio 的 input 元素)。<br>jQuery 代码:<br>$(“input:radio”, document.forms[0]); </p>
-<p>第二个参数是限定查找范围为document.forms[0]，找的是type 值为 radio 的 input 元素</p>
-<h2 id="3-关于-background-position属性"><a href="#3-关于-background-position属性" class="headerlink" title="3.关于 background-position属性"></a>3.关于 background-position属性</h2><p>可以很轻松的控制背景图像在对象的背景区域中的起始显示位置。 </p>
-<p><a href="https://blog.csdn.net/ixygj197875/article/details/79333151?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1" target="_blank" rel="noopener">相关内容</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/javascript//" class="article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/10/javascript%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E8%BD%AE%E6%92%AD%E5%9B%BE%E6%80%BB%E7%BB%93/">展开全文 >></a>
         </p>
       
 
