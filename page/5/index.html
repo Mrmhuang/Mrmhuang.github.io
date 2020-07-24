@@ -155,6 +155,231 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-javascript搜索框的实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/07/javascript%E6%90%9C%E7%B4%A2%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0/">javascript实现网站搜索框搜索框</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+
+<!--显示阅读次数完毕-->
+        
+        <a href="/2020/04/07/javascript%E6%90%9C%E7%B4%A2%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
+  	<time datetime="2020-04-07T14:00:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="网站搜索框的实现"><a href="#网站搜索框的实现" class="headerlink" title="网站搜索框的实现"></a>网站搜索框的实现</h1><h2 id="1-效果如图所示"><a href="#1-效果如图所示" class="headerlink" title="1.效果如图所示"></a>1.效果如图所示</h2><p><img src="https://s1.ax1x.com/2020/04/07/G6reJS.png" alt="搜索框"></p>
+<p>部分html代码如下</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-search"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-search-selected"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>医院<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-search-select-list"</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#1"</span>&gt;</span>科室<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#1"</span>&gt;</span>疾病<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#1"</span>&gt;</span>医院<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-search-input"</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">""</span> <span class="attr">placeholder</span>=<span class="string">"请输入要搜索的内容"</span>/&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-search-submit"</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">"搜索"</span> /&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>css代码如下</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type="text/css"&gt;</span><br><span class="line">			<span class="selector-tag">a</span>&#123;</span><br><span class="line">				<span class="attribute">text-decoration</span>: none;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">background-color</span>: darkgoldenrod;</span><br><span class="line">				<span class="attribute">position</span>: relative;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-selected</span>&#123;</span><br><span class="line">				<span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-selected</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">				<span class="attribute">display</span>: block;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">background-color</span>: aqua;</span><br><span class="line">				<span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">text-align</span>: center;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-select-list</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">				<span class="attribute">position</span>: absolute;</span><br><span class="line">				<span class="attribute">text-align</span>: center;</span><br><span class="line">				<span class="attribute">top</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">display</span>: none;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-select-list</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">				<span class="attribute">display</span>: block;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">25px</span>;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">46px</span>;</span><br><span class="line">				<span class="attribute">border</span>: <span class="number">2px</span> solid antiquewhite;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-select-list</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">				<span class="attribute">background-color</span>: lightgray;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-input</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">position</span>: absolute;</span><br><span class="line">				<span class="attribute">left</span>: <span class="number">50px</span>;</span><br><span class="line">				<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-input</span> <span class="selector-tag">input</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">38px</span>;</span><br><span class="line">				<span class="attribute">border</span>: <span class="number">0.0625rem</span> solid black;</span><br><span class="line">				<span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-submit</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">				<span class="attribute">position</span>: absolute;</span><br><span class="line">				<span class="attribute">left</span>: <span class="number">250px</span>;</span><br><span class="line">				<span class="attribute">top</span>: <span class="number">0px</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.ui-search-submit</span> <span class="selector-tag">input</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">42px</span>;</span><br><span class="line">				<span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>js代码如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> ui = $(<span class="keyword">this</span>);</span><br><span class="line">	$(<span class="string">'.ui-search-selected'</span>,ui).on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		$(<span class="string">'.ui-search-select-list'</span>).show();</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;);</span><br><span class="line">	$(<span class="string">'.ui-search-select-list a'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		$(<span class="string">'.ui-search-selected a'</span>).text($(<span class="keyword">this</span>).text());</span><br><span class="line">		$(<span class="string">'.ui-search-select-list'</span>).hide();</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;);</span><br><span class="line">	$(<span class="built_in">document</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">			$(<span class="string">'.ui-search-select-list'</span>).hide();</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;);</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>总结：设置元素的点击事件可以有多种方法，灵活运用this可以减少很多代码的工程，注意 text(),show(),hide()方法在jQuery中的使用</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/javascript//" class="article-tag-list-link color1">javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/07/javascript%E6%90%9C%E7%B4%A2%E6%A1%86%E7%9A%84%E5%AE%9E%E7%8E%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-关于git的使用(2)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/04/%E5%85%B3%E4%BA%8Egit%E7%9A%84%E4%BD%BF%E7%94%A8(2)/">我的第五篇博客文章</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+
+<!--显示阅读次数完毕-->
+        
+        <a href="/2020/04/04/%E5%85%B3%E4%BA%8Egit%E7%9A%84%E4%BD%BF%E7%94%A8(2)/" class="archive-article-date">
+  	<time datetime="2020-04-04T14:00:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="关于git的使用-2"><a href="#关于git的使用-2" class="headerlink" title="关于git的使用(2)"></a>关于git的使用(2)</h1><h2 id="1-关于远程仓库的使用-基于http协议"><a href="#1-关于远程仓库的使用-基于http协议" class="headerlink" title="(1)关于远程仓库的使用(基于http协议)"></a>(1)关于远程仓库的使用(基于http协议)</h2><p>（1）首先我们连接远程仓库（以github的仓库为例子)</p>
+<ul>
+<li>首先在github上创建一个仓库，点击仓库主页，在这个位置可以看见线上仓库地址</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/04/G0QHyt.png" alt="1585995297600"></p>
+<ul>
+<li><p>在你的磁盘中创建一个文件夹用于装取仓库内容</p>
+<p>可以手动创建，也可以在git中用命令创建</p>
+</li>
+<li><p>接着在git中输入命令</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$git clone <span class="string">"仓库地址"</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s1.ax1x.com/2020/04/04/G0QIWd.png" alt="图片"></p>
+<p><img src="https://s1.ax1x.com/2020/04/04/G0Q7QI.png" alt="1586002341846"></p>
+<p><img src="https://s1.ax1x.com/2020/04/04/G0QTSA.png" alt="1586001349180"></p>
+</li>
+</ul>
+<p>(2)我们可以添加文件，同步到github上</p>
+<ul>
+<li><p>这里我手动添加了名为first的txt文件</p>
+</li>
+<li><p>通过git添加文件，再把文件提交到暂存区</p>
+</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/04/G0Q5JH.png" alt="1586002352982"></p>
+<ul>
+<li>提交到本地仓库</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/04/G0QbOP.png" alt="1586002369897"></p>
+<ul>
+<li><p>提交到线上仓库</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$git push</span><br><span class="line">    <span class="comment">//提交到线上仓库</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s1.ax1x.com/2020/04/04/G0QLef.png" alt="1586002480964"></p>
+</li>
+</ul>
+<p>这时你会发现你github的这个仓库的确加了一个first.txt文件夹</p>
+<p>(3)拉取线上仓库的问题</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$git pull</span><br><span class="line">    <span class="comment">//拉取线上仓库，即手动添加在github的文件可以同步到本地目录上</span></span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Git//" class="article-tag-list-link color4">Git</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/04/%E5%85%B3%E4%BA%8Egit%E7%9A%84%E4%BD%BF%E7%94%A8(2)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-关于git的使用(1)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -348,91 +573,9 @@
 
 
   
-    <article id="post-Markdown的用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/02/Markdown%E7%9A%84%E7%94%A8%E6%B3%95/">我的第二篇的博客文章</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-        
-        <a href="/2020/04/02/Markdown%E7%9A%84%E7%94%A8%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-04-02T08:41:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Markdown快速入门"><a href="#Markdown快速入门" class="headerlink" title="Markdown快速入门"></a>Markdown快速入门</h1><h2 id="1-关于代码块"><a href="#1-关于代码块" class="headerlink" title="1.关于代码块"></a>1.关于代码块</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//代码块的语法 ```+语言</span></span><br><span class="line">如```html即可构建一个html的代码块</span><br></pre></td></tr></table></figure>
-
-<p>插入一个快速排序算法（java演示）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">quickbyline2</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] a = &#123;<span class="number">5</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">8</span>, <span class="number">6</span>, <span class="number">20</span>, <span class="number">10</span>&#125;;<span class="comment">//0,6</span></span><br><span class="line">        quick(a, <span class="number">0</span>, <span class="number">6</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">7</span>; i++) &#123;</span><br><span class="line">            System.out.println(a[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quick</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (l &lt; r) &#123;</span><br><span class="line">            <span class="keyword">int</span> i = l, j = r, x = a[l];</span><br><span class="line">            <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">                <span class="keyword">while</span> (j &gt; i &amp;&amp; a[j] &gt;= x) &#123;</span><br><span class="line">                    j--;</span><br><span class="line">                &#125;</span><br><span class="line">                a[i] = a[j];</span><br><span class="line">                <span class="keyword">while</span> (i &lt; j &amp;&amp; a[i] &lt;= x) &#123;</span><br><span class="line">                    i++;</span><br><span class="line">                &#125;</span><br><span class="line">                a[j] = a[i];</span><br><span class="line">            &#125;</span><br><span class="line">            a[j] = x;</span><br><span class="line">            quick(a, l, i - <span class="number">1</span>);</span><br><span class="line">            quick(a, i + <span class="number">1</span>, r);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/04/02/Markdown%E7%9A%84%E7%94%A8%E6%B3%95/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/02/Markdown%E7%9A%84%E7%94%A8%E6%B3%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/4/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
+      <a class="extend prev" rel="prev" href="/page/4/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/">Next &amp;raquo;</a>
     </nav>
   
 

@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Mrhuang</title>
+  <title>Archives: 2020 | Mrhuang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Mrhuang">
-<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+<meta property="og:url" content="http://yoursite.com/archives/2020/page/5/index.html">
 <meta property="og:site_name" content="Mrhuang">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Sjin">
@@ -155,53 +155,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-vue笔记(Day3)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/04/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AB%A0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
+  	<time datetime="2020-04-01T18:00:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-02</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/03/vue%E7%AC%94%E8%AE%B0(Day3)/">Vue学习笔记</a>
+      <a class="archive-article-title" href="/2020/04/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AB%A0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
     </h1>
   
 
-        <!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-        
-        <a href="/2020/07/03/vue%E7%AC%94%E8%AE%B0(Day3)/" class="archive-article-date">
-  	<time datetime="2020-07-03T04:58:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Vue学习笔记-Day3-计算属性"><a href="#Vue学习笔记-Day3-计算属性" class="headerlink" title="Vue学习笔记(Day3)(计算属性)"></a>Vue学习笔记(Day3)(计算属性)</h1><h2 id="1-计算属性的基本使用"><a href="#1-计算属性的基本使用" class="headerlink" title="1-计算属性的基本使用"></a>1-计算属性的基本使用</h2><ul>
-<li><p>说明：计算属性即可以用来放很多有复杂计算的方法</p>
-</li>
-<li><p>代码如下</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">  &#123;&#123;message&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123;fullname&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../vue/vue.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">  <span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="actionscript">    el:<span class="string">'#app'</span>,</span></span><br><span class="line">    data:&#123;</span><br><span class="line"><span class="actionscript">      message:<span class="string">'你好啊'</span>,</span></span><br><span class="line"><span class="actionscript">      firstname:<span class="string">'huang'</span>,</span></span><br><span class="line"><span class="actionscript">      lastname:<span class="string">'sj'</span></span></span><br><span class="line">    &#125;,</span><br><span class="line">    computed:&#123;</span><br><span class="line"><span class="actionscript">      fullname:<span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">return</span> <span class="keyword">this</span>.firstname + <span class="string">' '</span> + <span class="keyword">this</span>.lastname</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="2-计算属性的复杂操作"><a href="#2-计算属性的复杂操作" class="headerlink" title="2-计算属性的复杂操作"></a>2-计算属性的复杂操作</h2><ul>
-<li><p>可以在计算属性写有着复杂的操作的方法，</p>
-<p>因为计算属性是有缓存的，所以多次运行的时候效率比methods</p>
-</li>
-<li><p>代码如下</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h2</span>&gt;</span>总价格&#123;&#123;totalprice&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../vue/vue.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">  <span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="actionscript">    el:<span class="string">'#app'</span>,</span></span><br><span class="line">    data:&#123;</span><br><span class="line">      book:[</span><br><span class="line"><span class="actionscript">        &#123;name:<span class="string">'java'</span>,price:<span class="number">123</span>&#125;,</span></span><br><span class="line"><span class="actionscript">        &#123;name:<span class="string">'linux入门'</span>,price:<span class="number">223</span>&#125;,</span></span><br><span class="line"><span class="actionscript">        &#123;name:<span class="string">'数据库入门基础'</span>,price:<span class="number">123</span>&#125;,</span></span><br><span class="line">      ]</span><br><span class="line">    &#125;,</span><br><span class="line">    computed:&#123;</span><br><span class="line"><span class="actionscript">      totalprice:<span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> result = <span class="number">0</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;<span class="keyword">this</span>.book.length;i++)&#123;</span></span><br><span class="line"><span class="actionscript">          result+=<span class="keyword">this</span>.book[i].price</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="actionscript">        <span class="keyword">return</span> result</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/07/03/vue%E7%AC%94%E8%AE%B0(Day3)/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -213,415 +194,21 @@
 		</ul>
 	</div>
 
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue//" class="article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
+          
 
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/03/vue%E7%AC%94%E8%AE%B0(Day3)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-vue笔记(Day2)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/25/vue%E7%AC%94%E8%AE%B0(Day2)/">Vue学习笔记</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-        
-        <a href="/2020/06/25/vue%E7%AC%94%E8%AE%B0(Day2)/" class="archive-article-date">
-  	<time datetime="2020-06-25T12:00:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Vue学习笔记-Day2-动态绑定"><a href="#Vue学习笔记-Day2-动态绑定" class="headerlink" title="Vue学习笔记(Day2)(动态绑定)"></a>Vue学习笔记(Day2)(动态绑定)</h1><h2 id="1-v-bind的基本使用"><a href="#1-v-bind的基本使用" class="headerlink" title="1-v-bind的基本使用"></a>1-v-bind的基本使用</h2><ul>
-<li><p>首先要知道v-bind的语法糖是冒号</p>
-</li>
-<li><p>附上相关绑定href和src的代码，v-bind让网页绑定的数据是可变的(我这语文功底…啧啧啧)</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">  &#123;&#123;message&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">"lianjie"</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">"tupian"</span> <span class="attr">alt</span>=<span class="string">"这是一张图片"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:href</span>=<span class="string">"lianjie"</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">v-bind:src</span>=<span class="string">"tupian"</span> <span class="attr">alt</span>=<span class="string">"这是一张图片"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../vue/vue.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">  <span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="actionscript">    el:<span class="string">'#app'</span>,</span></span><br><span class="line">    data:&#123;</span><br><span class="line"><span class="actionscript">      message:<span class="string">'你好啊'</span>,</span></span><br><span class="line"><span class="actionscript">      lianjie:<span class="string">'https://www.baidu.com'</span>,</span></span><br><span class="line"><span class="actionscript">      tupian:<span class="string">'//i1.hdslb.com/bfs/archive/04cae00c9e4ad92e0b486c91165c9fd55e7ac1ee.jpg@400w_250h.webp'</span></span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ul>
-<p>注意data中的数据在实际项目中肯定不是一成不变的，多数是从服务器获取过来的，所以v-bind是十分有用的</p>
-<h2 id="2-v-bind动态绑定class（对象语法）"><a href="#2-v-bind动态绑定class（对象语法）" class="headerlink" title="2-v-bind动态绑定class（对象语法）"></a>2-v-bind动态绑定class（对象语法）</h2><ul>
-<li><p>v-bind动态绑定class的对象方法如下</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">  &#123;&#123;message&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">"hebingclass"</span> <span class="attr">v-bind:class</span>=<span class="string">"&#123;active:isactive,line:isline&#125;"</span>&gt;</span>点我我就会变色<span class="tag">&lt;/<span class="name">h2</span>&gt;</span> <span class="comment">&lt;!-- 绑定class要加括号 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h3</span> <span class="attr">v-bind:class</span>=<span class="string">"getclass()"</span>&gt;</span>点我我就会变色<span class="tag">&lt;/<span class="name">h3</span>&gt;</span> <span class="comment">&lt;!-- 方法2 --&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"bianse"</span>&gt;</span>变色<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"bianse"</span>&gt;</span>变色<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../vue/vue.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">  <span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="actionscript">    el:<span class="string">'#app'</span>,</span></span><br><span class="line">    data:&#123;</span><br><span class="line"><span class="actionscript">      message:<span class="string">'你好啊'</span>,</span></span><br><span class="line"><span class="actionscript">      isactive:<span class="literal">true</span>,</span></span><br><span class="line"><span class="actionscript">      isline:<span class="literal">false</span></span></span><br><span class="line">    &#125;,</span><br><span class="line">    methods:&#123;</span><br><span class="line"><span class="actionscript">      bianse:<span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">this</span>.isactive = !<span class="keyword">this</span>.isactive</span></span><br><span class="line">      &#125;,</span><br><span class="line"><span class="actionscript">      getclass:<span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">return</span> &#123;active:<span class="keyword">this</span>.isactive,line:<span class="keyword">this</span>.isline&#125;;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>总结：一般是以v-bind:class=”{classname1: boolean,classname2:boolean}”这种形式绑定,既可以直接写，也可以用方法返回</p>
-</li>
-</ul>
-<h2 id="3-v-bind动态绑定class-数组方法"><a href="#3-v-bind动态绑定class-数组方法" class="headerlink" title="3-v-bind动态绑定class(数组方法)"></a>3-v-bind动态绑定class(数组方法)</h2><ul>
-<li><p>v-bind动态绑定class的数组方法如下</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h2</span> <span class="attr">:class</span>=<span class="string">"[active,line]"</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h2</span> <span class="attr">:class</span>=<span class="string">"getclass()"</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../vue/vue.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">  <span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="actionscript">    el:<span class="string">'#app'</span>,</span></span><br><span class="line">    data:&#123;</span><br><span class="line"><span class="actionscript">      message:<span class="string">'你好啊'</span>,</span></span><br><span class="line"><span class="actionscript">      active:<span class="string">'aaa'</span>,</span></span><br><span class="line"><span class="actionscript">      line:<span class="string">'bbb'</span></span></span><br><span class="line">    &#125;,</span><br><span class="line">    methods:&#123;</span><br><span class="line"><span class="actionscript">      getclass:<span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">return</span> [<span class="keyword">this</span>.active,<span class="keyword">this</span>.line]</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>注意：一般很少用这种数组方法绑定class，因为不够灵活，无法再次改变绑定的class值</p>
-</li>
-<li><p>总结：v-bind动态绑定class的数组方法形式一般为</p>
-<p>v-bind:class=”[yuansu1,yuansu2]” .再在data中对yuansu1，yuansu2进行赋值，绑定的classname即为yuansu1，yuansu2的值</p>
-</li>
-</ul>
-<h2 id="4-v-bind动态绑定style-对象方法"><a href="#4-v-bind动态绑定style-对象方法" class="headerlink" title="4-v-bind动态绑定style(对象方法)"></a>4-v-bind动态绑定style(对象方法)</h2><ul>
-<li><p>v-bind动态绑定style的对象方法如下:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h2</span> <span class="attr">:style</span>=<span class="string">"&#123;fontSize:big,backgroundColor:bgc&#125;"</span>&gt;</span>你好<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>   <span class="comment">&lt;!-- 可以在fontSize的后面加上px，也可以在data里面加 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h2</span> <span class="attr">:style</span>=<span class="string">"getStyle()"</span>&gt;</span>你好<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../vue/vue.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">  <span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="actionscript">    el:<span class="string">'#app'</span>,</span></span><br><span class="line">    data:&#123;</span><br><span class="line"><span class="actionscript">      message:<span class="string">'你好啊'</span>,</span></span><br><span class="line"><span class="actionscript">      big:<span class="number">100</span>+<span class="string">'px'</span>,</span></span><br><span class="line"><span class="actionscript">      bgc:<span class="string">'red'</span></span></span><br><span class="line">    &#125;,</span><br><span class="line">    methods:&#123;</span><br><span class="line"><span class="actionscript">      getStyle:<span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">return</span> &#123;fontSize:<span class="keyword">this</span>.big,backgroundColor:<span class="keyword">this</span>.bgc&#125;;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>跟对象方法绑定class类似，v-bind动态绑定style的对象方法形式一般为v-bind:style=”{style1:a,style2:b}”,再在data中对a，b赋值，和绑定class不同的是a,b是样式了，而class绑定的此处是布尔值</p>
-</li>
-<li><p>当然也可以通过方法的形式直接返回一个对象进行绑定</p>
-</li>
-</ul>
-<h2 id="5-v-bind动态绑定style-数组方法"><a href="#5-v-bind动态绑定style-数组方法" class="headerlink" title="5-v-bind动态绑定style(数组方法)"></a>5-v-bind动态绑定style(数组方法)</h2><ul>
-<li><p>v-bind动态绑定style的数组方法如下</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h2</span> <span class="attr">:style</span>=<span class="string">"[sty1,sty2]"</span>&gt;</span>你好<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../vue/vue.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">  <span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="actionscript">    el:<span class="string">'#app'</span>,</span></span><br><span class="line">    data:&#123;</span><br><span class="line"><span class="actionscript">      message:<span class="string">'你好啊'</span>,</span></span><br><span class="line"><span class="actionscript">      sty1:&#123;fontSize:<span class="string">'100px'</span>&#125;,</span></span><br><span class="line"><span class="actionscript">      sty2:&#123;backgroundColor:<span class="string">'red'</span>&#125;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>这种绑定style的方法是较少用的</p>
-</li>
-<li><p>一般形式为 v-bind:style=”[sty1,sty2]”</p>
-</li>
-<li><p>sty1,sty2在data中返回对象,对象中包括样式名，样式</p>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue//" class="article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/25/vue%E7%AC%94%E8%AE%B0(Day2)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-vue笔记(Day1)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/09/vue%E7%AC%94%E8%AE%B0(Day1)/">Vue学习笔记</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-        
-        <a href="/2020/06/09/vue%E7%AC%94%E8%AE%B0(Day1)/" class="archive-article-date">
-  	<time datetime="2020-06-09T13:00:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Vue学习笔记-Day1-ES6-vue初体验-插值操作"><a href="#Vue学习笔记-Day1-ES6-vue初体验-插值操作" class="headerlink" title="Vue学习笔记(Day1)(ES6+vue初体验+插值操作)"></a>Vue学习笔记(Day1)(ES6+vue初体验+插值操作)</h1><h2 id="1-ES6的补充"><a href="#1-ES6的补充" class="headerlink" title="1-ES6的补充"></a>1-ES6的补充</h2><h3 id="1-块级作用域"><a href="#1-块级作用域" class="headerlink" title="(1)块级作用域"></a>(1)块级作用域</h3><ul>
-<li><p>var是javascript设计时的缺陷，使用var会使你解决某些问题时出现困境，所以在ES6中出现了let取代它</p>
-</li>
-<li><p>var和let最大的区别就是let是有块级作用域的，而var没有</p>
-</li>
-<li><p>简单举例一个使用var造成的问题</p>
-<p>html:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>2<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>3<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>4<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>5<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>js:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> btns = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'button'</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;btns.length;i++)&#123;</span><br><span class="line">  btns[i].addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'第'</span>+i+<span class="string">'个按钮被点击了'</span>)</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-<p>执行后发现不论点击哪个按钮，都是显示（第5个按钮被点击），因为var定义的i没有块级作用域。</p>
-<p>当然也有在ES5中解决此问题的方法，使用闭包，用函数自调，因为函数有作用域。</p>
-<p>把js改为:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;btns.length;i++)&#123;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span> (<span class="params">i</span>) </span>&#123;</span><br><span class="line">      btns[i].addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'第'</span>+i+<span class="string">'个按钮被点击了'</span>)</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;)(i)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-<p>然而把var变为let是这样的:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> btns = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'button'</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;btns.length;i++)&#123;</span><br><span class="line">  btns[i].addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'第'</span>+i+<span class="string">'个按钮被点击了'</span>)</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-<p>简单快捷，而且let不会造成全局污染，完全解决问题,十分有用!</p>
-</li>
-</ul>
-<h3 id="2-const的用法"><a href="#2-const的用法" class="headerlink" title="(2)const的用法"></a>(2)const的用法</h3><p>const定义的普通常量不能再修改，但是const定义的对象里的数据是可以修改的，其他的没什么重点.</p>
-<h3 id="3-ES6对象字面量增强写法"><a href="#3-ES6对象字面量增强写法" class="headerlink" title="(3)ES6对象字面量增强写法"></a>(3)ES6对象字面量增强写法</h3><ul>
-<li><p>注意重点，对象</p>
-</li>
-<li><p>在对象里，函数可以写成</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//新写法</span></span><br><span class="line">函数名()&#123;&#125;</span><br><span class="line"><span class="comment">//旧写法</span></span><br><span class="line">函数名:funtion()&#123;&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在对象里，定义对象的数据可以写成</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//新写法</span></span><br><span class="line"><span class="keyword">const</span> obj=&#123;</span><br><span class="line">    name,</span><br><span class="line">    age</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//旧写法</span></span><br><span class="line"><span class="keyword">const</span> obj=&#123;</span><br><span class="line">    name:name,</span><br><span class="line">    age:age</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-        
-          <a class="article-more-a" href="/2020/06/09/vue%E7%AC%94%E8%AE%B0(Day1)/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue//" class="article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/09/vue%E7%AC%94%E8%AE%B0(Day1)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-react安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/20/react%E5%AE%89%E8%A3%85/">react</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-        
-        <a href="/2020/05/20/react%E5%AE%89%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2020-05-20T04:00:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="react的简单环境的安装"><a href="#react的简单环境的安装" class="headerlink" title="react的简单环境的安装"></a>react的简单环境的安装</h1><h3 id="1-安装前提"><a href="#1-安装前提" class="headerlink" title="1.安装前提"></a>1.安装前提</h3><ul>
-<li><p>已经安装好node.js，若未安装，请进入下方链接（教程+安装链接）都在里面</p>
-<p><a href="https://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">安装node.js</a></p>
-</li>
-<li><p>已安装好npm</p>
-</li>
-</ul>
-<h3 id="2-安装脚手架"><a href="#2-安装脚手架" class="headerlink" title="2.安装脚手架"></a>2.安装脚手架</h3><ul>
-<li><p>打开命令行运行以下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx create-react-app my-app</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>可能会出现错误，如下图所示</p>
-<p><img src="https://s1.ax1x.com/2020/05/20/Y72bnK.png" alt=""></p>
-<p>解决方法: 把npm更新到最新版本</p>
-        
-          <a class="article-more-a" href="/2020/05/20/react%E5%AE%89%E8%A3%85/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/react//" class="article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/20/react%E5%AE%89%E8%A3%85/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/archives/2020/page/4/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2020/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/page/3/">3</a><a class="page-number" href="/archives/2020/page/4/">4</a><span class="page-number current">5</span>
     </nav>
   
 
@@ -646,9 +233,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
