@@ -6,15 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/7 | Mrhuang</title>
+  <title>Vue学习笔记 | Mrhuang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Mrhuang">
-<meta property="og:url" content="http://yoursite.com/archives/2020/07/page/2/index.html">
+  <meta name="description" content="Vue项目打包部署1.部署前的准备服务器，文件，winSCP软件，SecureCRT软件 2.对vue项目进行打包命令： 1npm run build  注意:我的vue项目是处于history模式下打包的，直接打开是会空白的，因为history打包的文件是要通过后端配置的，即服务器。  3.SecureCRT连接服务器，在服务器终端安装nginx1234567891011&#x2F;&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue学习笔记">
+<meta property="og:url" content="http://yoursite.com/2020/08/20/vue%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2/index.html">
 <meta property="og:site_name" content="Mrhuang">
+<meta property="og:description" content="Vue项目打包部署1.部署前的准备服务器，文件，winSCP软件，SecureCRT软件 2.对vue项目进行打包命令： 1npm run build  注意:我的vue项目是处于history模式下打包的，直接打开是会空白的，因为history打包的文件是要通过后端配置的，即服务器。  3.SecureCRT连接服务器，在服务器终端安装nginx1234567891011&#x2F;&#x2F;">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/20/d8TVm9.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/20/d8TiSU.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/20/d8Tky4.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/20/d8TFlF.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/20/d8TCWT.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/20/d8TAOJ.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/20/d8TZwR.png">
+<meta property="article:published_time" content="2020-08-20T10:33:04.000Z">
+<meta property="article:modified_time" content="2020-08-20T07:07:02.478Z">
 <meta property="article:author" content="Sjin">
+<meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/08/20/d8TVm9.png">
   
     <link rel="alternative" href="/atom.xml" title="Mrhuang" type="application/atom+xml">
   
@@ -154,35 +167,110 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-  
+<article id="post-vue项目打包部署" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Vue学习笔记
+    </h1>
+  
+
+        <!--显示阅读次数-->
+
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+  	阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+
+<!--显示阅读次数完毕-->
+        
+        <a href="/2020/08/20/vue%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2/" class="archive-article-date">
+  	<time datetime="2020-08-20T10:33:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-20</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Vue项目打包部署"><a href="#Vue项目打包部署" class="headerlink" title="Vue项目打包部署"></a>Vue项目打包部署</h1><h2 id="1-部署前的准备"><a href="#1-部署前的准备" class="headerlink" title="1.部署前的准备"></a>1.部署前的准备</h2><p>服务器，文件，winSCP软件，SecureCRT软件</p>
+<h2 id="2-对vue项目进行打包"><a href="#2-对vue项目进行打包" class="headerlink" title="2.对vue项目进行打包"></a>2.对vue项目进行打包</h2><p>命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+
+<p>注意:我的vue项目是处于history模式下打包的，直接打开是会空白的，因为history打包的文件是要通过后端配置的，即服务器。</p>
+<p><img src="https://s1.ax1x.com/2020/08/20/d8TVm9.png" alt="1597860779883"></p>
+<h2 id="3-SecureCRT连接服务器，在服务器终端安装nginx"><a href="#3-SecureCRT连接服务器，在服务器终端安装nginx" class="headerlink" title="3.SecureCRT连接服务器，在服务器终端安装nginx"></a>3.SecureCRT连接服务器，在服务器终端安装nginx</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;我是在服务器的 &#x2F;etc下安装的</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;命令如下</span><br><span class="line">yum install nginx</span><br><span class="line">systemctl start nginx.service &#x2F;&#x2F;开启nginx服务</span><br><span class="line">systemctl enable nginx.service  &#x2F;&#x2F;跟随系统启动</span><br><span class="line"></span><br><span class="line">附加：</span><br><span class="line">systemctl start nginx &#x2F;&#x2F;开启nginx服务</span><br><span class="line">systemctl stop nginx &#x2F;&#x2F;停止nginx服务</span><br><span class="line">因为每次配置完nginx文件都是要重新开启nginx服务才会起效的</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-在SecureCRT连接远程服务器（我的是腾讯云的centos）"><a href="#4-在SecureCRT连接远程服务器（我的是腾讯云的centos）" class="headerlink" title="4.在SecureCRT连接远程服务器（我的是腾讯云的centos）"></a>4.在SecureCRT连接远程服务器（我的是腾讯云的centos）</h2><p><img src="https://s1.ax1x.com/2020/08/20/d8TiSU.png" alt="1597861303057"></p>
+<p>安装完成顺带查看一下</p>
+<h2 id="5-在winSCP连接服务器把打包好的dist文件上传到服务器"><a href="#5-在winSCP连接服务器把打包好的dist文件上传到服务器" class="headerlink" title="5.在winSCP连接服务器把打包好的dist文件上传到服务器"></a>5.在winSCP连接服务器把打包好的dist文件上传到服务器</h2><p><img src="https://s1.ax1x.com/2020/08/20/d8Tky4.png" alt="1597861466035"></p>
+<h2 id="6-配置之前安装好的nginx"><a href="#6-配置之前安装好的nginx" class="headerlink" title="6.配置之前安装好的nginx"></a>6.配置之前安装好的nginx</h2><p>找到/etc/nginx目录下的nginx.conf配置路径，也可以在服务器通过vim配置</p>
+<p><img src="https://s1.ax1x.com/2020/08/20/d8TFlF.png" alt="1597861567652"></p>
+<h2 id="7-到这里我以为成功了，结果打开域名一看出现了403-forbidden"><a href="#7-到这里我以为成功了，结果打开域名一看出现了403-forbidden" class="headerlink" title="7.到这里我以为成功了，结果打开域名一看出现了403 forbidden"></a>7.到这里我以为成功了，结果打开域名一看出现了403 forbidden</h2><p>解决:</p>
+<p>先在服务器var/log/nginx/error.log下查找错误的原因</p>
+<p><img src="https://s1.ax1x.com/2020/08/20/d8TCWT.png" alt="1597861768305"></p>
+<p>3个步骤：</p>
+<ul>
+<li><p>打开nginx.conf 把user nginx改成了user root;</p>
+<p> 查看nginx的启动用户,发现是root而不是nginx</p>
+<p> 将nginx.config的user改为和启动用户一致</p>
+<p><img src="https://s1.ax1x.com/2020/08/20/d8TAOJ.png" alt="1597861891716"></p>
+</li>
+<li><p>修改权限</p>
+<p>防止访问者无权访问文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chomod -R 777 dist</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>SELinux设置为开启状态（enabled）</p>
+</li>
+<li><p>完事: reboot,或者重启nginx</p>
+</li>
+</ul>
+<h2 id="8-大功告成"><a href="#8-大功告成" class="headerlink" title="8.大功告成"></a>8.大功告成</h2><p>我部署了一个疫情地图的项目</p>
+<p><img src="https://s1.ax1x.com/2020/08/20/d8TZwR.png" alt="1597862198719"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zfbpay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wcpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/06/vue%E7%AC%94%E8%AE%B0(Day6)/" class="archive-article-date">
-  	<time datetime="2020-07-06T00:51:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/06/vue%E7%AC%94%E8%AE%B0(Day6)/">Vue学习笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -194,7 +282,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -207,168 +295,128 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/20/vue%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/05/vue%E7%AC%94%E8%AE%B0(Day5)/" class="archive-article-date">
-  	<time datetime="2020-07-05T03:51:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-05</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/22/Webpack%E7%AC%94%E8%AE%B0(Day1)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Webpack学习笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/05/vue%E7%AC%94%E8%AE%B0(Day5)/">Vue学习笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue//" class="article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue项目打包部署"><span class="toc-number">1.</span> <span class="toc-text">Vue项目打包部署</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-部署前的准备"><span class="toc-number">1.1.</span> <span class="toc-text">1.部署前的准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-对vue项目进行打包"><span class="toc-number">1.2.</span> <span class="toc-text">2.对vue项目进行打包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-SecureCRT连接服务器，在服务器终端安装nginx"><span class="toc-number">1.3.</span> <span class="toc-text">3.SecureCRT连接服务器，在服务器终端安装nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-在SecureCRT连接远程服务器（我的是腾讯云的centos）"><span class="toc-number">1.4.</span> <span class="toc-text">4.在SecureCRT连接远程服务器（我的是腾讯云的centos）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-在winSCP连接服务器把打包好的dist文件上传到服务器"><span class="toc-number">1.5.</span> <span class="toc-text">5.在winSCP连接服务器把打包好的dist文件上传到服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-配置之前安装好的nginx"><span class="toc-number">1.6.</span> <span class="toc-text">6.配置之前安装好的nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-到这里我以为成功了，结果打开域名一看出现了403-forbidden"><span class="toc-number">1.7.</span> <span class="toc-text">7.到这里我以为成功了，结果打开域名一看出现了403 forbidden</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-大功告成"><span class="toc-number">1.8.</span> <span class="toc-text">8.大功告成</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/04/vue%E7%AC%94%E8%AE%B0(Day4)/" class="archive-article-date">
-  	<time datetime="2020-07-04T04:58:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/04/vue%E7%AC%94%E8%AE%B0(Day4)/">Vue学习笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue//" class="article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/03/vue%E7%AC%94%E8%AE%B0(Day3)/" class="archive-article-date">
-  	<time datetime="2020-07-03T04:58:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-03</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/03/vue%E7%AC%94%E8%AE%B0(Day3)/">Vue学习笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue//" class="article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
+  <div id="SOHUCS" sid="vue项目打包部署" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2020/07/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2020/07/">1</a><span class="page-number current">2</span>
-    </nav>
   
+
+  
+
 
 
           </div>
@@ -392,8 +440,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
