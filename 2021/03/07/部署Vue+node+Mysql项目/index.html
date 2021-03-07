@@ -6,15 +6,31 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | Mrhuang</title>
+  <title>部署Vue+mysql+node构建的后台管理系统 | Mrhuang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Mrhuang">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <meta name="description" content="Vue+mysql+node构建的后台管理系统的部署准备工作： 在服务器安装好淘宝镜像（因为要下的东西很多）1npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org  在服务器安装好node，npm-这里我先安装好nvm(node的管理工具)，再用它安装node 1wget -qO- https:&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="部署Vue+mysql+node构建的后台管理系统">
+<meta property="og:url" content="http://yoursite.com/2021/03/07/%E9%83%A8%E7%BD%B2Vue+node+Mysql%E9%A1%B9%E7%9B%AE/index.html">
 <meta property="og:site_name" content="Mrhuang">
+<meta property="og:description" content="Vue+mysql+node构建的后台管理系统的部署准备工作： 在服务器安装好淘宝镜像（因为要下的东西很多）1npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org  在服务器安装好node，npm-这里我先安装好nvm(node的管理工具)，再用它安装node 1wget -qO- https:&amp;">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s3.ax1x.com/2021/03/07/6MnIXD.png">
+<meta property="og:image" content="https://s3.ax1x.com/2021/03/07/6Mn56O.png">
+<meta property="og:image" content="https://s3.ax1x.com/2021/03/07/6MnTne.png">
+<meta property="og:image" content="https://s3.ax1x.com/2021/03/07/6Mnhp6.png">
+<meta property="og:image" content="https://s3.ax1x.com/2021/03/07/6Mn41K.png">
+<meta property="og:image" content="https://s3.ax1x.com/2021/03/07/6Mn70H.png">
+<meta property="og:image" content="https://s3.ax1x.com/2021/03/07/6MnH7d.png">
+<meta property="og:image" content="https://s3.ax1x.com/2021/03/07/6MnqAA.png">
+<meta property="og:image" content="https://s3.ax1x.com/2021/03/07/6MnLtI.png">
+<meta property="og:image" content="https://s3.ax1x.com/2021/03/07/6MnOht.png">
+<meta property="article:published_time" content="2021-03-07T09:00:04.000Z">
+<meta property="article:modified_time" content="2021-03-07T10:48:28.669Z">
 <meta property="article:author" content="Sjin">
+<meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3.ax1x.com/2021/03/07/6MnIXD.png">
   
     <link rel="alternative" href="/atom.xml" title="Mrhuang" type="application/atom+xml">
   
@@ -154,35 +170,161 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-  
+<article id="post-部署Vue+node+Mysql项目" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      部署Vue+mysql+node构建的后台管理系统
+    </h1>
+  
+
+        <!--显示阅读次数-->
+
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+  	阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+
+<!--显示阅读次数完毕-->
+        
+        <a href="/2021/03/07/%E9%83%A8%E7%BD%B2Vue+node+Mysql%E9%A1%B9%E7%9B%AE/" class="archive-article-date">
+  	<time datetime="2021-03-07T09:00:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-07</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Vue-mysql-node构建的后台管理系统的部署"><a href="#Vue-mysql-node构建的后台管理系统的部署" class="headerlink" title="Vue+mysql+node构建的后台管理系统的部署"></a>Vue+mysql+node构建的后台管理系统的部署</h1><h2 id="准备工作："><a href="#准备工作：" class="headerlink" title="准备工作："></a>准备工作：</h2><ul>
+<li><h3 id="在服务器安装好淘宝镜像（因为要下的东西很多）"><a href="#在服务器安装好淘宝镜像（因为要下的东西很多）" class="headerlink" title="在服务器安装好淘宝镜像（因为要下的东西很多）"></a>在服务器安装好淘宝镜像（因为要下的东西很多）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+</li>
+<li><h3 id="在服务器安装好node，npm"><a href="#在服务器安装好node，npm" class="headerlink" title="在服务器安装好node，npm"></a>在服务器安装好node，npm</h3><p>-这里我先安装好nvm(node的管理工具)，再用它安装node</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -qO- https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;nvm-sh&#x2F;nvm&#x2F;v0.34.0&#x2F;install.sh | bash</span><br></pre></td></tr></table></figure>
+
+<p>安装好后输入命令nvm，有一大串文字出现就是成功了</p>
+<p>-安装node</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm  install node</span><br></pre></td></tr></table></figure>
+
+<p>好了之后输入node -v出现版本号就是安装成功了</p>
+<p>注意wget是centos的一个下载工具，若没有也要提前手动安装</p>
+</li>
+<li><h3 id="在服务器安装mysql（输入四条命令）"><a href="#在服务器安装mysql（输入四条命令）" class="headerlink" title="在服务器安装mysql（输入四条命令）"></a>在服务器安装mysql（输入四条命令）</h3><ol>
+<li>yum  -y  install   wget(若没有wget就装)</li>
+<li>wget <a href="http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm" target="_blank" rel="noopener">http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm</a> </li>
+<li>rpm -ivh mysql-community-release-el7-5.noarch.rpm</li>
+<li>yum install mysql-server</li>
+</ol>
+<p>再则：</p>
+<p>(1).开启服务器的3306访问端口，开启方法(大概就这两三条命令):</p>
+<p>(2).开端口命令：firewall-cmd –zone=public –add-port=80/tcp –permanent </p>
+<p>(3)重启防火墙：systemctl restart firewalld.service </p>
+<p>更多命令：<a href="https://blog.csdn.net/zll_0405/article/details/81208606" target="_blank" rel="noopener">https://blog.csdn.net/zll_0405/article/details/81208606</a></p>
+<h4 id="接着我出现了忘记mysql密码的事情，解决办法"><a href="#接着我出现了忘记mysql密码的事情，解决办法" class="headerlink" title="-    接着我出现了忘记mysql密码的事情，解决办法:"></a>-    接着我出现了忘记mysql密码的事情，解决办法:</h4><p><a href="https://www.cnblogs.com/ice-image/p/10493702.html" target="_blank" rel="noopener">https://www.cnblogs.com/ice-image/p/10493702.html</a></p>
+<h4 id="接着我用navicat尝试链接远程的数据库，却出现了链接失败，解决办法："><a href="#接着我用navicat尝试链接远程的数据库，却出现了链接失败，解决办法：" class="headerlink" title="-    接着我用navicat尝试链接远程的数据库，却出现了链接失败，解决办法："></a>-    接着我用navicat尝试链接远程的数据库，却出现了链接失败，解决办法：</h4><p><a href="https://blog.csdn.net/konglongaa/article/details/80996829" target="_blank" rel="noopener">https://blog.csdn.net/konglongaa/article/details/80996829</a></p>
+<h4 id="连接成功后将本地的项目数据库文件导入了"><a href="#连接成功后将本地的项目数据库文件导入了" class="headerlink" title="-    连接成功后将本地的项目数据库文件导入了:"></a>-    连接成功后将本地的项目数据库文件导入了:</h4><p>直接用navicat，很好用</p>
+</li>
+<li><h3 id="安装Nginx（官网下载安装包拉进服务器解压就完事了，我提早就装好了）"><a href="#安装Nginx（官网下载安装包拉进服务器解压就完事了，我提早就装好了）" class="headerlink" title="安装Nginx（官网下载安装包拉进服务器解压就完事了，我提早就装好了）"></a>安装Nginx（官网下载安装包拉进服务器解压就完事了，我提早就装好了）</h3><p>nginx的东西都忘了，可以看这个补补：</p>
+<p><a href="https://www.cnblogs.com/kevingrace/p/6804429.html" target="_blank" rel="noopener">https://www.cnblogs.com/kevingrace/p/6804429.html</a></p>
+</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="1-打包好前端项目"><a href="#1-打包好前端项目" class="headerlink" title="1-打包好前端项目"></a>1-打包好前端项目</h2><ul>
+<li><p>我使用的是Vue-element-admin开发的系统，首先我要在vue.config.js里面修改publicPath，为了待会和nginx的配置对应</p>
+<p><img src="https://s3.ax1x.com/2021/03/07/6MnIXD.png" alt="1615100923360"></p>
+</li>
+<li><p>修改route下的index.js文件(加了一个base)<img src="https://s3.ax1x.com/2021/03/07/6Mn56O.png" alt="1615100999880"></p>
+</li>
+<li><p>可以打包了</p>
+<p>打包好的index.html如下所示（路径前是/manager/）</p>
+<p>这里在head里还要加一个<meta base=/student/> </p>
+<p><img src="https://s3.ax1x.com/2021/03/07/6MnTne.png" alt="1615101037430"></p>
+</li>
+<li><p>我把项目放下了我服务器的nginx目录下的html目录（命名为了manager）</p>
+<p><img src="https://s3.ax1x.com/2021/03/07/6Mnhp6.png" alt="1615101132990"></p>
+</li>
+<li><p>对nginx文件进行配置</p>
+<p>这是我这个服务器上部署的第二个Vue项目，所以nginx配置文件如下图</p>
+<p><img src="https://s3.ax1x.com/2021/03/07/6Mn41K.png" alt="1615101258511"></p>
+<p>重点是中间的两个location，这个时候就可以打开站点看见前端部分可以运行起来了，只是network error而已，因为没有接口，node还没部署。</p>
+</li>
+<li><p>另外注意！！！！！！！</p>
+<p>前端发送请求的URL记得改成服务器上的URL，因为待会Node接口也是在服务器上的</p>
+</li>
+</ul>
+<h2 id="2-后端Node的部署"><a href="#2-后端Node的部署" class="headerlink" title="2-后端Node的部署"></a>2-后端Node的部署</h2><ul>
+<li><p>先把文件除了node_modules放下服务器上<img src="https://s3.ax1x.com/2021/03/07/6Mn70H.png" alt="1615110890579"></p>
+</li>
+<li><p>接着npm install一下</p>
+</li>
+<li><p>安装pm2 运行app.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g pm2  <span class="comment">//全局安装pm2</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 -v <span class="comment">//查看pm2的版本</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 start ××.js <span class="comment">//进入运行node核心文件(我的是app.js文件)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 list <span class="comment">//可以看到所有正在pm2控制下运行的进程</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s3.ax1x.com/2021/03/07/6MnH7d.png" alt="1615111277571"></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 restart name <span class="comment">//重启名为name的进程</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 log name <span class="comment">//查看名为name的日志</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s3.ax1x.com/2021/03/07/6MnqAA.png" alt="1615111377615"></p>
+<p>pm2中文文档：<a href="http://www.mamicode.com/info-detail-1701787.html" target="_blank" rel="noopener">http://www.mamicode.com/info-detail-1701787.html</a></p>
+<p>注意：同样的记得把node文件里头文件储存路径也修改为服务器上的储存路径</p>
+</li>
+</ul>
+<h2 id="3-Nginx开启远程目录访问"><a href="#3-Nginx开启远程目录访问" class="headerlink" title="3-Nginx开启远程目录访问"></a>3-Nginx开启远程目录访问</h2><p>因为我的项目有图片等资源要让用户访问，所以要开放usr文件夹下的资源访问权限，以下是我配置nginx的方法：(我的文件权限是755，777很危险注意别乱设置)</p>
+<p><img src="https://s3.ax1x.com/2021/03/07/6MnLtI.png" alt="1615112670058"></p>
+<p>另外附上我其他项目的nginx配置：</p>
+<p><img src="https://s3.ax1x.com/2021/03/07/6MnOht.png" alt="1615113179784"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zfbpay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wcpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/20/vue%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2/" class="archive-article-date">
-  	<time datetime="2020-08-20T10:33:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/20/vue%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2/">Vue学习笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -194,7 +336,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -207,217 +349,128 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2021/03/07/%E9%83%A8%E7%BD%B2Vue+node+Mysql%E9%A1%B9%E7%9B%AE/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/22/Webpack%E7%AC%94%E8%AE%B0(Day1)/" class="archive-article-date">
-  	<time datetime="2020-07-22T15:37:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-22</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/20/vue%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Vue学习笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/22/Webpack%E7%AC%94%E8%AE%B0(Day1)/">Webpack学习笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Webpack//" class="article-tag-list-link color3">Webpack</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue-mysql-node构建的后台管理系统的部署"><span class="toc-number">1.</span> <span class="toc-text">Vue+mysql+node构建的后台管理系统的部署</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备工作："><span class="toc-number">1.1.</span> <span class="toc-text">准备工作：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在服务器安装好淘宝镜像（因为要下的东西很多）"><span class="toc-number">1.1.1.</span> <span class="toc-text">在服务器安装好淘宝镜像（因为要下的东西很多）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在服务器安装好node，npm"><span class="toc-number">1.1.2.</span> <span class="toc-text">在服务器安装好node，npm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在服务器安装mysql（输入四条命令）"><span class="toc-number">1.1.3.</span> <span class="toc-text">在服务器安装mysql（输入四条命令）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#接着我出现了忘记mysql密码的事情，解决办法"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">-    接着我出现了忘记mysql密码的事情，解决办法:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#接着我用navicat尝试链接远程的数据库，却出现了链接失败，解决办法："><span class="toc-number">1.1.3.2.</span> <span class="toc-text">-    接着我用navicat尝试链接远程的数据库，却出现了链接失败，解决办法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#连接成功后将本地的项目数据库文件导入了"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">-    连接成功后将本地的项目数据库文件导入了:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Nginx（官网下载安装包拉进服务器解压就完事了，我提早就装好了）"><span class="toc-number">1.1.4.</span> <span class="toc-text">安装Nginx（官网下载安装包拉进服务器解压就完事了，我提早就装好了）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-打包好前端项目"><span class="toc-number">1.2.</span> <span class="toc-text">1-打包好前端项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-后端Node的部署"><span class="toc-number">1.3.</span> <span class="toc-text">2-后端Node的部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Nginx开启远程目录访问"><span class="toc-number">1.4.</span> <span class="toc-text">3-Nginx开启远程目录访问</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/21/vue%E7%AC%94%E8%AE%B0(Day10)/" class="archive-article-date">
-  	<time datetime="2020-07-21T06:33:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/21/vue%E7%AC%94%E8%AE%B0(Day10)/">Vue学习笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue//" class="article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/20/vue%E7%AC%94%E8%AE%B0(Day9)/" class="archive-article-date">
-  	<time datetime="2020-07-20T07:37:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-20</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/20/vue%E7%AC%94%E8%AE%B0(Day9)/">Vue学习笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue//" class="article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/16/vue%E7%AC%94%E8%AE%B0(Day8)/" class="archive-article-date">
-  	<time datetime="2020-07-16T14:18:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/16/vue%E7%AC%94%E8%AE%B0(Day8)/">Vue学习笔记</a>
-    </h1>
+  <div id="SOHUCS" sid="部署Vue+node+Mysql项目" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue//" class="article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2020/page/2/">2</a><a class="page-number" href="/archives/2020/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/page/5/">5</a><a class="extend next" rel="next" href="/archives/2020/page/2/">Next &amp;raquo;</a>
-    </nav>
   
+
 
 
           </div>
@@ -441,8 +494,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
